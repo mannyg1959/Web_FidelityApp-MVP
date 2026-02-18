@@ -12,7 +12,7 @@ const BenefitsScreen = () => {
                                 Transforma clientes ocasionales en <span className="text-primary italic">clientes para toda la vida</span>
                             </h1>
                             <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mt-4">
-                                Kpoint no es solo una tarjeta de puntos digital. Es el motor de crecimiento que tu negocio necesita para prosperar en la era digital.
+                                Kpoint no es solo un monedero de puntos digital. Es el motor de crecimiento que tu negocio necesita para prosperar en la era digital.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
                                 <div className="space-y-3">
@@ -89,8 +89,8 @@ const BenefitsScreen = () => {
                                 <h4 className="font-bold dark:text-white">Estética</h4>
                             </div>
                             <div className="p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300">
-                                <span className="material-symbols-outlined text-4xl text-purple-500 mb-4">fitness_center</span>
-                                <h4 className="font-bold dark:text-white">Gimnasios</h4>
+                                <span className="material-symbols-outlined text-4xl text-purple-500 mb-4">storefront</span>
+                                <h4 className="font-bold dark:text-white">Kioscos</h4>
                             </div>
                         </div>
                     </div>
