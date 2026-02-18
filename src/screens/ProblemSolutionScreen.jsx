@@ -41,7 +41,7 @@ const ProblemSolutionScreen = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Apps complicadas</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Nadie quiere descargar otra aplicación que ocupa espacio, pide mil permisos y es difícil de usar.</p>
+                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Nadie quiere descargar otra aplicación que ocupa espacio en tu dispositivo, pide mil permisos y es difícil de usar.</p>
                                     </div>
                                 </div>
                                 <div className="group flex gap-5">
@@ -80,7 +80,7 @@ const ProblemSolutionScreen = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Sin descargas obligatorias</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Todo funciona desde el navegador web o WhatsApp. Cero fricción para que tus clientes participen.</p>
+                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Todo funciona desde tu dispositivo móvil o el navegador web. Cero fricción para que tus clientes participen.</p>
                                     </div>
                                 </div>
                                 <div className="group flex gap-5 p-4 rounded-2xl hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-colors duration-300 -ml-4">

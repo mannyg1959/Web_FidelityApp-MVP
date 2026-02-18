@@ -13,7 +13,7 @@ const HomeScreen = () => {
                                 Convierte visitas ocasionales en <span className="bg-gradient-to-r from-primary to-green-400 bg-clip-text text-transparent">fans leales.</span>
                             </h1>
                             <p className="text-lg leading-relaxed text-text-muted sm:text-xl">
-                                La plataforma de fidelización digital que simplifica las recompensas, digitaliza tu tarjeta de sellos y potencia el crecimiento de tu negocio sin complicaciones técnicas.
+                                KPoint es la plataforma de fidelización digital que simplifica las recompensas, digitaliza tu tarjeta de sellos y potencia el crecimiento de tu negocio sin complicaciones técnicas.
                             </p>
                         </div>
                         <div className="flex flex-col gap-4 sm:flex-row">
@@ -29,11 +29,11 @@ const HomeScreen = () => {
                         <div className="mt-4 flex items-center gap-6 text-sm text-text-muted">
                             <div className="flex items-center gap-2">
                                 <span className="material-symbols-outlined text-green-600">check_circle</span>
-                                <span>Sin tarjeta de crédito</span>
+                                <span>Sin registros complicados de afiliación</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <span className="material-symbols-outlined text-green-600">check_circle</span>
-                                <span>Setup en 5 minutos</span>
+                                <span>Setup en 3 minutos</span>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@ const HomeScreen = () => {
                                                 <span className="material-symbols-outlined text-[20px]">add</span>
                                             </div>
                                             <div className="flex-1">
-                                                <p className="text-sm font-bold text-text-main">Latte Grande</p>
+                                                <p className="text-sm font-bold text-text-main">Chocolate Savoy Grande</p>
                                                 <p className="text-xs text-text-muted">Ayer, 10:30 AM</p>
                                             </div>
                                             <span className="font-bold text-primary">+1 pt</span>
@@ -93,7 +93,7 @@ const HomeScreen = () => {
                                                 <span className="material-symbols-outlined text-[20px]">add</span>
                                             </div>
                                             <div className="flex-1">
-                                                <p className="text-sm font-bold text-text-main">Espresso Doble</p>
+                                                <p className="text-sm font-bold text-text-main">CocaCola 1 Litro</p>
                                                 <p className="text-xs text-text-muted">12 Oct, 09:15 AM</p>
                                             </div>
                                             <span className="font-bold text-primary">+1 pt</span>

@@ -25,7 +25,7 @@ const HowItWorksScreen = () => {
                                         <img
                                             src="/logo_kpoint.png"
                                             alt="Kpoint Logo"
-                                            className="h-24 md:h-36 w-auto object-contain drop-shadow-[0_20px_50px_rgba(43,238,108,0.3)]"
+                                            className="h-32 md:h-48 w-auto object-contain"
                                         />
 
                                         {/* Decorative Badge */}
