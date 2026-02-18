@@ -30,7 +30,7 @@ const HowItWorksScreen = () => {
 
                                         {/* Decorative Badge */}
                                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-primary text-[#102216] px-5 py-1.5 rounded-full text-[11px] font-black tracking-[0.25em] uppercase shadow-lg border-2 border-white dark:border-slate-900">
-                                            Trusted Solution
+                                            SOLUCIÓN PROBADA
                                         </div>
                                     </div>
                                 </div>
