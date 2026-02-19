@@ -94,10 +94,10 @@ const ProblemSolutionScreen = () => {
                                 </div>
                             </div>
                             <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-700">
-                                <Link to="/pricing" className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl h-14 px-8 bg-gray-900 dark:bg-white dark:text-gray-900 text-white text-base font-bold hover:bg-gray-800 dark:hover:bg-gray-100 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                                <a href="https://fidelity-app-mvp.vercel.app/" className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl h-14 px-8 bg-gray-900 dark:bg-white dark:text-gray-900 text-white text-base font-bold hover:bg-gray-800 dark:hover:bg-gray-100 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
                                     Crear cuenta gratis
                                     <span className="material-symbols-outlined text-primary dark:text-primary-dark">arrow_forward</span>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -112,9 +112,9 @@ const ProblemSolutionScreen = () => {
                                 Únete a cientos de negocios que ya están aumentando sus ventas recurrentes con Kpoint.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                                <Link to="/pricing" className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-primary text-[#102216] text-base font-bold hover:bg-[#25d360] transition-colors shadow-[0_0_20px_rgba(43,238,108,0.3)]">
+                                <a href="https://fidelity-app-mvp.vercel.app/" className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-primary text-[#102216] text-base font-bold hover:bg-[#25d360] transition-colors shadow-[0_0_20px_rgba(43,238,108,0.3)]">
                                     Comenzar ahora
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>

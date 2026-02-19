@@ -17,10 +17,10 @@ const HomeScreen = () => {
                             </p>
                         </div>
                         <div className="flex flex-col gap-4 sm:flex-row">
-                            <Link to="/pricing" className="group flex h-14 min-w-[180px] cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary px-8 text-base font-bold text-text-main shadow-glow transition-all hover:-translate-y-1 hover:bg-[#1fe260]">
+                            <a href="https://fidelity-app-mvp.vercel.app/" className="group flex h-14 min-w-[180px] cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary px-8 text-base font-bold text-text-main shadow-glow transition-all hover:-translate-y-1 hover:bg-[#1fe260]">
                                 <span>Solicitar Demo</span>
                                 <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
-                            </Link>
+                            </a>
                             <Link to="/how-it-works" className="group flex h-14 min-w-[180px] cursor-pointer items-center justify-center gap-2 rounded-xl border border-[#dbe6df] bg-white px-8 text-base font-bold text-text-main transition-all hover:border-primary/50 hover:bg-background-subtle hover:text-green-800">
                                 <span className="material-symbols-outlined text-green-600">play_circle</span>
                                 <span>Cómo funciona</span>

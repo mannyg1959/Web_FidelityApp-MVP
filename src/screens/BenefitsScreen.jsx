@@ -181,9 +181,9 @@ const BenefitsScreen = () => {
                             ¿Listo para ver tu negocio crecer?
                         </h2>
                         <div className="relative z-10">
-                            <button className="h-14 px-10 rounded-2xl bg-primary dark:bg-[#102216] text-[#102216] dark:text-white font-black text-lg hover:scale-105 transition-all shadow-2xl">
+                            <a href="https://fidelity-app-mvp.vercel.app/" className="inline-flex h-14 px-10 rounded-2xl bg-primary dark:bg-[#102216] items-center justify-center text-[#102216] dark:text-white font-black text-lg hover:scale-105 transition-all shadow-2xl">
                                 Solicitar Demo
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </section>

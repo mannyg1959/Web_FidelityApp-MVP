@@ -123,9 +123,9 @@ const DashboardScreen = () => {
                             </div>
                             <h2 className="text-2xl md:text-4xl font-black mb-4 relative z-10 italic">Tus datos nunca se vieron tan bien.</h2>
                             <p className="text-lg mb-6 relative z-10 font-medium">Toma decisiones basadas en evidencias, no en suposiciones.</p>
-                            <Link to="/pricing" className="inline-flex h-12 px-8 items-center justify-center rounded-2xl bg-slate-900 text-white font-bold text-base hover:bg-black transition-all relative z-10">
+                            <a href="https://fidelity-app-mvp.vercel.app/" className="inline-flex h-12 px-8 items-center justify-center rounded-2xl bg-slate-900 text-white font-bold text-base hover:bg-black transition-all relative z-10">
                                 Probar gratis por 30 días
-                            </Link>
+                            </a>
                         </div>
                     </section>
                 </main>

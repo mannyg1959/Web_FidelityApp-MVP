@@ -48,9 +48,9 @@ export const Navbar = () => {
                 <button className="hidden cursor-pointer rounded-lg px-4 py-2 text-sm font-semibold text-text-main dark:text-white transition-colors hover:bg-background-subtle md:block">
                     Iniciar sesión
                 </button>
-                <Link to="/pricing" className="hidden md:flex cursor-pointer items-center justify-center rounded-lg bg-text-main px-4 py-2 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-black hover:shadow-xl dark:bg-primary dark:text-background-dark">
+                <a href="https://fidelity-app-mvp.vercel.app/" className="hidden md:flex cursor-pointer items-center justify-center rounded-lg bg-text-main px-4 py-2 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-black hover:shadow-xl dark:bg-primary dark:text-background-dark">
                     Empezar gratis
-                </Link>
+                </a>
 
                 {/* Mobile Menu Button */}
                 <button
@@ -78,9 +78,9 @@ export const Navbar = () => {
                         <button className="w-full rounded-xl bg-background-subtle py-4 font-bold text-text-main dark:text-white">
                             Iniciar sesión
                         </button>
-                        <Link to="/pricing" onClick={() => setIsMenuOpen(false)} className="flex w-full items-center justify-center rounded-xl bg-primary py-4 font-bold text-background-dark">
+                        <a href="https://fidelity-app-mvp.vercel.app/" onClick={() => setIsMenuOpen(false)} className="flex w-full items-center justify-center rounded-xl bg-primary py-4 font-bold text-background-dark">
                             Empezar gratis
-                        </Link>
+                        </a>
                     </div>
                 </div>
             )}

@@ -152,10 +152,10 @@ const HowItWorksScreen = () => {
                     </div>
                 </section>
                 <div className="py-10 text-center">
-                    <Link to="/pricing" className="inline-flex items-center gap-3 bg-gray-900 dark:bg-primary text-white dark:text-[#102216] px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-xl">
+                    <a href="https://fidelity-app-mvp.vercel.app/" className="inline-flex items-center gap-3 bg-gray-900 dark:bg-primary text-white dark:text-[#102216] px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-xl">
                         Empezar ahora gratis
                         <span className="material-symbols-outlined">rocket_launch</span>
-                    </Link>
+                    </a>
                 </div>
             </main>
         </div>
