@@ -118,7 +118,7 @@ const BenefitsScreen = () => {
                                     </div>
                                     <h3 className="text-2xl font-bold mb-4 dark:text-white">Kiosko "Santa Ana"</h3>
                                     <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed italic">
-                                        "Desde que implementamos Kpoint, nuestros clientes no solo vuelven más seguido, sino que ya no pierden sus puntos. El registro con el número de teléfono es tan rápido que no ralentiza la atención en horas pico."
+                                        "La verdad es que nos cambió la vida. Antes los clientes perdían las tarjetas de cartón y se desanimaban. Ahora, con solo darnos su número, ya están sumando. Lo mejor es que en plena hora pico no nos quita ni 10 segundos."
                                     </p>
                                     <div className="grid grid-cols-3 gap-4 pt-6 border-t dark:border-slate-700">
                                         <div>
@@ -150,7 +150,7 @@ const BenefitsScreen = () => {
                                     </div>
                                     <h3 className="text-2xl font-bold mb-4 dark:text-white">Burgers "El Garage"</h3>
                                     <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed italic">
-                                        "Al ser un negocio móvil, necesitamos algo que funcione en cualquier lugar. Mis clientes aman recibir notificaciones de dónde estamos y cuántos puntos les faltan para su próxima hamburguesa gratis."
+                                        "Como siempre nos estamos moviendo, necesitaba algo digital que no fuera un lío. A la gente le encanta que les llegue el aviso de dónde estamos parqueados hoy y ver que ya les falta poco para su hamburguesa de regalo."
                                     </p>
                                     <div className="grid grid-cols-3 gap-4 pt-6 border-t dark:border-slate-700">
                                         <div>
