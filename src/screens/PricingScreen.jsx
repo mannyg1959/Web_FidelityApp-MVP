@@ -7,19 +7,33 @@ const PricingScreen = () => {
             <main className="flex-1">
                 <section className="py-10 px-4 text-center max-w-4xl mx-auto">
                     <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">Precios simples para <span className="text-primary italic">crecer.</span></h1>
-                    <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400">Escoge el plan que mejor se adapte al tamaño de tu negocio.</p>
+                    <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-6">Escoge el plan que mejor se adapte al tamaño de tu negocio.</p>
+                    <div className="inline-block bg-primary/10 border border-primary/20 rounded-2xl px-6 py-3 animate-bounce">
+                        <p className="text-primary font-black text-lg">
+                            🚀 ¡DISPONES DE 30 DÍAS GRATIS AL SUSCRIBIRTE!
+                        </p>
+                    </div>
                 </section>
                 <section className="px-4 pb-12">
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Starter */}
-                        <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-10 border border-slate-100 dark:border-slate-800 flex flex-col h-full hover:shadow-2xl transition-all duration-300">
-                            <div className="mb-8">
-                                <h3 className="text-xl font-bold mb-2">Starter</h3>
-                                <p className="text-slate-500 text-sm">Ideal para pequeños negocios locales.</p>
+                        {/* Starter -> Arranque */}
+                        <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-10 border border-slate-100 dark:border-slate-800 flex flex-col h-full hover:shadow-2xl transition-all duration-300 relative group">
+                            <div className="absolute top-4 right-6 bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold animate-pulse">
+                                ¡30 DÍAS GRATIS!
                             </div>
                             <div className="mb-8">
+                                <h3 className="text-xl font-bold mb-2">Arranque</h3>
+                                <p className="text-slate-500 text-sm">Ideal para pequeños negocios locales.</p>
+                            </div>
+                            <div className="mb-4">
                                 <span className="text-5xl font-black">$29</span>
                                 <span className="text-slate-400">/mes</span>
+                            </div>
+                            <div className="mb-8 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
+                                <p className="text-xs font-bold text-primary flex items-center gap-2">
+                                    <span className="material-symbols-outlined text-sm">redeem</span>
+                                    ¡Pruébalo gratis por 30 días!
+                                </p>
                             </div>
                             <ul className="space-y-4 mb-10 flex-1">
                                 <li className="flex gap-3 text-sm items-center">
@@ -28,10 +42,10 @@ const PricingScreen = () => {
                                 </li>
                                 <li className="flex gap-3 text-sm items-center">
                                     <span className="material-symbols-outlined text-primary">check_circle</span>
-                                    <span>Tarjetas de sellos digitales</span>
+                                    <span>Mensajería tipo Push (<span className="italic">Push</span>)</span>
                                 </li>
-                                <li className="flex gap-3 text-sm items-center text-slate-400">
-                                    <span className="material-symbols-outlined">radio_button_unchecked</span>
+                                <li className="flex gap-3 text-sm items-center">
+                                    <span className="material-symbols-outlined text-primary">check_circle</span>
                                     <span>Soporte por email</span>
                                 </li>
                             </ul>
@@ -45,9 +59,15 @@ const PricingScreen = () => {
                                 <h3 className="text-xl font-bold mb-2 text-white">Growth</h3>
                                 <p className="text-slate-400 text-sm">Para negocios en expansión.</p>
                             </div>
-                            <div className="mb-8 text-white">
+                            <div className="mb-4 text-white">
                                 <span className="text-5xl font-black">$59</span>
                                 <span className="text-slate-400">/mes</span>
+                            </div>
+                            <div className="mb-8 p-3 rounded-xl bg-white/10 border border-white/20">
+                                <p className="text-xs font-bold text-primary flex items-center gap-2">
+                                    <span className="material-symbols-outlined text-sm">redeem</span>
+                                    ¡30 DÍAS DE PRUEBA INCLUIDOS!
+                                </p>
                             </div>
                             <ul className="space-y-4 mb-10 flex-1 text-white">
                                 <li className="flex gap-3 text-sm items-center">
