@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ProblemSolutionScreen = () => {
     return (
-        <div className="bg-background-light dark:bg-background-dark text-[#111813] antialiased">
+        <div className="antialiased">
             <main className="flex flex-col">
                 <section className="py-10 px-4 text-center bg-white dark:bg-background-dark">
                     <div className="max-w-3xl mx-auto">

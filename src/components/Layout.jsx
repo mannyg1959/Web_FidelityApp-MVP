@@ -36,12 +36,12 @@ export const Navbar = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden items-center gap-8 md:flex">
-                <NavLink to="/">Inicio</NavLink>
-                <NavLink to="/problem-solution">Solución</NavLink>
-                <NavLink to="/how-it-works">Cómo funciona</NavLink>
-                <NavLink to="/benefits">Beneficios</NavLink>
-                <NavLink to="/dashboard">Dashboard</NavLink>
-                <NavLink to="/pricing">Precios</NavLink>
+                <a href="#inicio" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Inicio</a>
+                <a href="#solucion" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Solución</a>
+                <a href="#como-funciona" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Cómo funciona</a>
+                <a href="#beneficios" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Beneficios</a>
+                <a href="#dashboard" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Dashboard</a>
+                <a href="#precios" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Precios</a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -67,12 +67,12 @@ export const Navbar = () => {
             {isMenuOpen && (
                 <div className="fixed inset-x-0 top-[73px] z-[90] flex h-[calc(100vh-73px)] flex-col bg-white p-6 dark:bg-background-dark md:hidden">
                     <nav className="flex flex-col gap-6 text-lg">
-                        <NavLink to="/" onClick={() => setIsMenuOpen(false)}>Inicio</NavLink>
-                        <NavLink to="/problem-solution" onClick={() => setIsMenuOpen(false)}>Solución</NavLink>
-                        <NavLink to="/how-it-works" onClick={() => setIsMenuOpen(false)}>Cómo funciona</NavLink>
-                        <NavLink to="/benefits" onClick={() => setIsMenuOpen(false)}>Beneficios</NavLink>
-                        <NavLink to="/dashboard" onClick={() => setIsMenuOpen(false)}>Dashboard</NavLink>
-                        <NavLink to="/pricing" onClick={() => setIsMenuOpen(false)}>Precios</NavLink>
+                        <a href="#inicio" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Inicio</a>
+                        <a href="#solucion" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Solución</a>
+                        <a href="#como-funciona" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Cómo funciona</a>
+                        <a href="#beneficios" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Beneficios</a>
+                        <a href="#dashboard" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Dashboard</a>
+                        <a href="#precios" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Precios</a>
                     </nav>
                     <div className="mt-auto flex flex-col gap-4">
                         <button className="w-full rounded-xl bg-background-subtle py-4 font-bold text-text-main dark:text-white">

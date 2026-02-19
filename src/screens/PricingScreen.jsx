@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const PricingScreen = () => {
     return (
-        <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+        <div className="flex flex-col">
             <main className="flex-1">
                 <section className="py-10 px-4 text-center max-w-4xl mx-auto">
                     <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">Precios simples para <span className="text-primary italic">crecer.</span></h1>

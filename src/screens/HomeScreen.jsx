@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HomeScreen = () => {
     return (
-        <div className="flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light text-text-main mesh-gradient">
+        <div className="flex w-full flex-col overflow-x-hidden">
             <main className="flex flex-1 flex-col items-center justify-center px-6 py-6 md:px-12 lg:px-20 lg:py-12">
                 <div className="layout-content-container flex w-full max-w-[1280px] flex-col gap-16 lg:flex-row lg:items-center">
                     {/* Left Column: Copy & CTAs */}

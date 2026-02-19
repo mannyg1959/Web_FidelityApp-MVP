@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const BenefitsScreen = () => {
     return (
-        <div className="bg-background-light dark:bg-background-dark text-[#111813] font-display antialiased">
+        <div className="antialiased">
             <main className="flex-1">
                 <section className="px-6 md:px-10 lg:px-40 py-10 md:py-12 max-w-[1440px] mx-auto">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -95,7 +95,84 @@ const BenefitsScreen = () => {
                         </div>
                     </div>
                 </section>
-                <section className="py-12 px-6">
+
+                {/* Success Stories Section */}
+                <section id="casos-exito" className="py-16 px-6 bg-slate-50 dark:bg-slate-900/50">
+                    <div className="max-w-[1280px] mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-black mb-4 dark:text-white">Lo que dicen nuestros clientes</h2>
+                            <p className="text-lg text-slate-600 dark:text-slate-400">Resultados reales de negocios que ya usan Kpoint.</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="bg-white dark:bg-slate-800 rounded-[2.5rem] p-8 md:p-10 shadow-xl border border-slate-100 dark:border-slate-700 relative overflow-hidden group transition-all hover:shadow-2xl">
+                                <div className="absolute top-0 right-0 p-6">
+                                    <span className="material-symbols-outlined text-6xl text-primary/10 group-hover:scale-110 transition-transform">storefront</span>
+                                </div>
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-1 mb-6 text-primary">
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-4 dark:text-white">Kiosko "El Faro"</h3>
+                                    <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed italic">
+                                        "En un kiosco el tiempo es oro. Con Kpoint capturamos 1,500 clientes en un mes sin demorar la fila. La recurrencia ha subido un 40% porque los clientes están motivados a completar su monedero."
+                                    </p>
+                                    <div className="grid grid-cols-3 gap-4 pt-6 border-t dark:border-slate-700">
+                                        <div>
+                                            <p className="text-2xl font-black text-primary">+40%</p>
+                                            <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Recurrencia</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-2xl font-black text-primary">15s</p>
+                                            <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Registro</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-2xl font-black text-primary">1.5k</p>
+                                            <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Clientes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bg-white dark:bg-slate-800 rounded-[2.5rem] p-8 md:p-10 shadow-xl border border-slate-100 dark:border-slate-700 relative overflow-hidden group transition-all hover:shadow-2xl">
+                                <div className="absolute top-0 right-0 p-6">
+                                    <span className="material-symbols-outlined text-6xl text-orange-500/10 group-hover:scale-110 transition-transform">coffee</span>
+                                </div>
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-1 mb-6 text-primary">
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                        <span className="material-symbols-outlined text-sm">star</span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-4 dark:text-white">Eco Café Central</h3>
+                                    <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed italic">
+                                        "Pasamos de tarjetas de sellos perdidas a un sistema 100% digital. Ahora conocemos los gustos de nuestros clientes y podemos enviarles ofertas cuando el local está tranquilo."
+                                    </p>
+                                    <div className="grid grid-cols-3 gap-4 pt-6 border-t dark:border-slate-700">
+                                        <div>
+                                            <p className="text-2xl font-black text-primary">x2.4</p>
+                                            <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Visitas</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-2xl font-black text-primary">+15%</p>
+                                            <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Ticket</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-2xl font-black text-primary">-90%</p>
+                                            <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Papel</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="py-12 px-6 pb-24">
                     <div className="max-w-[1000px] mx-auto bg-slate-900 dark:bg-primary rounded-[3rem] p-12 md:p-20 flex flex-col items-center text-center overflow-hidden relative">
                         <div className="absolute top-0 right-0 p-8 opacity-10">
                             <span className="material-symbols-outlined text-9xl text-white dark:text-black">confirmation_number</span>

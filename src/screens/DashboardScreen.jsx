@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const DashboardScreen = () => {
     return (
-        <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-slate-900 overflow-x-hidden">
-            <div className="flex flex-col min-h-screen">
+        <div className="antialiased selection:bg-primary selection:text-slate-900 overflow-x-hidden">
+            <div className="flex flex-col">
                 <main className="flex-grow">
                     <section className="relative pt-10 pb-12 md:pt-14 md:pb-16 overflow-hidden">
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl">

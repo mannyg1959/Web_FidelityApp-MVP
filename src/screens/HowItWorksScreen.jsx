@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HowItWorksScreen = () => {
     return (
-        <div className="bg-background-light dark:bg-background-dark font-display text-[#111813] antialiased">
+        <div className="antialiased">
             <main className="flex-grow">
                 <section className="relative overflow-hidden pt-12 pb-6 sm:pt-16 sm:pb-8 px-4">
                     <div className="mx-auto max-w-7xl">

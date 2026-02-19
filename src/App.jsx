@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MainLayout } from './components/Layout';
-import HomeScreen from './screens/HomeScreen';
+import LandingPage from './screens/LandingPage';
 import ProblemSolutionScreen from './screens/ProblemSolutionScreen';
 import HowItWorksScreen from './screens/HowItWorksScreen';
 import BenefitsScreen from './screens/BenefitsScreen';
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<HomeScreen />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/problem-solution" element={<ProblemSolutionScreen />} />
           <Route path="/how-it-works" element={<HowItWorksScreen />} />
           <Route path="/benefits" element={<BenefitsScreen />} />
