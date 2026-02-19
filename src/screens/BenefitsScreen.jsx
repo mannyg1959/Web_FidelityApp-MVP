@@ -173,19 +173,16 @@ const BenefitsScreen = () => {
                 </section>
 
                 <section className="py-12 px-6 pb-24">
-                    <div className="max-w-[1000px] mx-auto bg-slate-900 dark:bg-primary rounded-[3rem] p-12 md:p-20 flex flex-col items-center text-center overflow-hidden relative">
+                    <div className="max-w-[800px] mx-auto bg-slate-900 dark:bg-primary rounded-[2.5rem] p-10 md:p-12 flex flex-col items-center text-center overflow-hidden relative">
                         <div className="absolute top-0 right-0 p-8 opacity-10">
-                            <span className="material-symbols-outlined text-9xl text-white dark:text-black">confirmation_number</span>
+                            <span className="material-symbols-outlined text-7xl text-white dark:text-black">confirmation_number</span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-black text-white dark:text-[#102216] mb-8 relative z-10">
+                        <h2 className="text-2xl md:text-4xl font-black text-white dark:text-[#102216] mb-8 relative z-10">
                             ¿Listo para ver tu negocio crecer?
                         </h2>
-                        <div className="flex flex-col sm:flex-row gap-4 relative z-10">
-                            <button className="h-16 px-10 rounded-2xl bg-primary dark:bg-[#102216] text-[#102216] dark:text-white font-black text-lg hover:scale-105 transition-all shadow-2xl">
+                        <div className="relative z-10">
+                            <button className="h-14 px-10 rounded-2xl bg-primary dark:bg-[#102216] text-[#102216] dark:text-white font-black text-lg hover:scale-105 transition-all shadow-2xl">
                                 Solicitar Demo
-                            </button>
-                            <button className="h-16 px-10 rounded-2xl bg-white/10 dark:bg-black/10 backdrop-blur-md text-white dark:text-black font-black text-lg hover:bg-white/20 transition-all border border-white/20">
-                                Ver casos de éxito
                             </button>
                         </div>
                     </div>
