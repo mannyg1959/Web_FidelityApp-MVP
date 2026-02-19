@@ -35,9 +35,6 @@ const PricingScreen = () => {
                                     <span>Soporte por email</span>
                                 </li>
                             </ul>
-                            <button className="w-full py-4 rounded-xl border-2 border-slate-900 dark:border-white font-bold hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all">
-                                Empezar con Starter
-                            </button>
                         </div>
                         {/* Growth */}
                         <div className="bg-slate-900 dark:bg-slate-800 rounded-[2rem] p-10 border-4 border-primary flex flex-col h-full shadow-2xl relative transform scale-105 z-10">
@@ -70,9 +67,6 @@ const PricingScreen = () => {
                                     <span>Soporte prioritario 24/7</span>
                                 </li>
                             </ul>
-                            <button className="w-full py-4 rounded-xl bg-primary text-[#102216] font-black text-lg hover:scale-105 transition-all shadow-glow">
-                                Probar Growth Gratis
-                            </button>
                         </div>
                         {/* Enterprise */}
                         <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-10 border border-slate-100 dark:border-slate-800 flex flex-col h-full hover:shadow-2xl transition-all duration-300">
@@ -97,9 +91,6 @@ const PricingScreen = () => {
                                     <span>Account Manager dedicado</span>
                                 </li>
                             </ul>
-                            <button className="w-full py-4 rounded-xl border-2 border-slate-900 dark:border-white font-bold hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all">
-                                Contactar Ventas
-                            </button>
                         </div>
                     </div>
                 </section>
