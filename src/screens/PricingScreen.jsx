@@ -1,7 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const PricingScreen = () => {
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const faqs = [
+        {
+            question: "¿Mis clientes tienen que descargar una aplicación pesada para acumular puntos?",
+            answer: "¡Para nada! Sabemos que la gente no quiere llenar su teléfono de aplicaciones que consumen memoria. Con KPoint, tus clientes acceden a su monedero de premios digital simplemente escaneando un código QR en tu kiosco. Rápido, sin fricciones y perfecto para mantener la agilidad cuando tienes fila esperando sus productos."
+        },
+        {
+            question: "¿Necesito comprar escáneres, pantallas o equipos costosos?",
+            answer: "No. Todo el sistema está diseñado para funcionar directamente desde el teléfono celular que ya tienes en tu negocio. Solo necesitas conexión a internet y la cámara de tu teléfono para escanear a tus clientes y otorgar los puntos por cada perro caliente o combo que vendas."
+        },
+        {
+            question: "¿Me exigen firmar contratos a largo plazo?",
+            answer: "Cero ataduras. Creemos en ganar tu confianza mes a mes con resultados reales. Puedes cancelar tu plan en cualquier momento, sin penalizaciones ni letras pequeñas engañosas."
+        },
+        {
+            question: "¿Cuáles son los métodos de pago para mi suscripción mensual?",
+            answer: "Pensando en la realidad comercial de tu negocio local, ofrecemos total flexibilidad. Puedes domiciliar tu pago o realizarlo mes a mes de forma sencilla a través de pago móvil, transferencias nacionales o dólares. La idea es facilitarte la administración, no complicarla."
+        },
+        {
+            question: "¿Puedo cambiar de plan si mi negocio crece?",
+            answer: "¡Por supuesto! De hecho, ese es el objetivo. Si tus promociones son un éxito y empiezas a recibir más volumen de clientes habituales, puedes saltar del Plan Arranque al Plan Impulso (o superior) en cuestión de clics. Solo pagarás la diferencia proporcional por el resto del mes."
+        },
+        {
+            question: "¿Qué pasa con la información de mis clientes si decido cancelar?",
+            answer: "La base de datos de tu clientela es tuya. Si alguna vez decides dejar de usar el programa, puedes exportar fácilmente la lista de tus clientes registrados y sus datos de contacto antes de cerrar tu cuenta."
+        }
+    ];
+
     return (
         <div className="flex flex-col">
             <main className="flex-1">
@@ -115,12 +144,48 @@ const PricingScreen = () => {
                         </div>
                     </div>
                 </section>
-                <section className="py-16 bg-slate-50 dark:bg-slate-950">
-                    <div className="max-w-3xl mx-auto px-4 text-center">
-                        <h2 className="text-3xl font-black mb-8">¿Tienes más preguntas?</h2>
-                        <button className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-8 py-4 rounded-2xl font-bold hover:shadow-lg transition-all">
-                            Habla con un experto de Kpoint
-                        </button>
+
+                {/* FAQ Section */}
+                <section className="py-20 bg-slate-50 dark:bg-slate-950 px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-5xl font-black mb-4">Preguntas Frecuentes</h2>
+                            <p className="text-slate-600 dark:text-slate-400">Todo lo que necesitas saber sobre Kpoint para tu negocio.</p>
+                        </div>
+
+                        <div className="space-y-4">
+                            {faqs.map((faq, index) => (
+                                <div key={index} className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 overflow-hidden transition-all duration-300">
+                                    <button
+                                        onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                                        className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
+                                    >
+                                        <span className="text-lg font-bold pr-8">{faq.question}</span>
+                                        <span className={`material-symbols-outlined transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                                            expand_more
+                                        </span>
+                                    </button>
+                                    <div className={`transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                        <div className="px-8 pb-8 text-slate-600 dark:text-slate-400 leading-relaxed pt-2">
+                                            {faq.answer}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="mt-20 p-10 bg-slate-900 rounded-[3rem] text-center text-white relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 p-8 opacity-10 transform translate-x-8 -translate-y-8 pointer-events-none">
+                                <span className="material-symbols-outlined text-[120px]">help_outline</span>
+                            </div>
+                            <div className="relative z-10">
+                                <h3 className="text-2xl font-black mb-6">¿Aún tienes dudas?</h3>
+                                <button className="inline-flex items-center gap-2 bg-primary text-[#102216] px-8 py-4 rounded-2xl font-black hover:scale-105 transition-transform shadow-glow">
+                                    <span className="material-symbols-outlined">support_agent</span>
+                                    Habla con un experto de Kpoint
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
