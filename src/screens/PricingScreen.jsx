@@ -79,10 +79,10 @@ const PricingScreen = () => {
                                 </li>
                             </ul>
                         </div>
-                        {/* Growth */}
+                        {/* Impulso */}
                         <div className="bg-slate-900 dark:bg-slate-800 rounded-[2rem] p-10 border-4 border-primary flex flex-col h-full shadow-2xl relative transform scale-105 z-10">
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold mb-2 text-white">Growth</h3>
+                                <h3 className="text-xl font-bold mb-2 text-white">Impulso</h3>
                                 <p className="text-slate-400 text-sm">Para negocios en expansión.</p>
                             </div>
                             <div className="mb-4 text-white">
@@ -118,10 +118,10 @@ const PricingScreen = () => {
                                 </li>
                             </ul>
                         </div>
-                        {/* Enterprise */}
+                        {/* Expansión */}
                         <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-10 border border-slate-100 dark:border-slate-800 flex flex-col h-full hover:shadow-2xl transition-all duration-300">
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold mb-2">Enterprise</h3>
+                                <h3 className="text-xl font-bold mb-2">Expansión</h3>
                                 <p className="text-slate-500 text-sm">Para franquicias y múltiples puntos.</p>
                             </div>
                             <div className="mb-8">
