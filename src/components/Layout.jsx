@@ -36,12 +36,12 @@ export const Navbar = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden items-center gap-8 md:flex">
-                <a href="#inicio" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Inicio</a>
-                <a href="#solucion" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Solución</a>
-                <a href="#como-funciona" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Cómo funciona</a>
-                <a href="#beneficios" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Beneficios</a>
-                <a href="#dashboard" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Dashboard</a>
-                <a href="#precios" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Precios</a>
+                <a href="/#inicio" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Inicio</a>
+                <a href="/#solucion" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Solución</a>
+                <a href="/#como-funciona" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Cómo funciona</a>
+                <a href="/#beneficios" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Beneficios</a>
+                <a href="/#dashboard" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Dashboard</a>
+                <a href="/#precios" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Precios</a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -67,12 +67,12 @@ export const Navbar = () => {
             {isMenuOpen && (
                 <div className="fixed inset-x-0 top-[73px] z-[90] flex h-[calc(100vh-73px)] flex-col bg-white p-6 dark:bg-background-dark md:hidden">
                     <nav className="flex flex-col gap-6 text-lg">
-                        <a href="#inicio" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Inicio</a>
-                        <a href="#solucion" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Solución</a>
-                        <a href="#como-funciona" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Cómo funciona</a>
-                        <a href="#beneficios" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Beneficios</a>
-                        <a href="#dashboard" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Dashboard</a>
-                        <a href="#precios" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Precios</a>
+                        <a href="/#inicio" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Inicio</a>
+                        <a href="/#solucion" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Solución</a>
+                        <a href="/#como-funciona" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Cómo funciona</a>
+                        <a href="/#beneficios" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Beneficios</a>
+                        <a href="/#dashboard" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Dashboard</a>
+                        <a href="/#precios" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Precios</a>
                     </nav>
                     <div className="mt-auto flex flex-col gap-4">
                         <button className="w-full rounded-xl bg-background-subtle py-4 font-bold text-text-main dark:text-white">
@@ -112,6 +112,45 @@ export const Footer = () => (
 );
 
 export const MainLayout = () => {
+    const { pathname, hash } = useLocation();
+
+    useEffect(() => {
+        // Handle initial load with hash or hash changes
+        if (hash) {
+            const id = hash.replace('#', '');
+            const element = document.getElementById(id);
+            if (element) {
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: element.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }, 100);
+            }
+        }
+    }, [pathname, hash]);
+
+    useEffect(() => {
+        const handleAnchorClick = (e) => {
+            const link = e.target.closest('a');
+            if (link && link.hash && (link.pathname === pathname || link.pathname === '/')) {
+                const targetId = link.hash.replace('#', '');
+                const element = document.getElementById(targetId);
+                if (element) {
+                    e.preventDefault();
+                    window.history.pushState(null, '', link.hash);
+                    window.scrollTo({
+                        top: element.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        };
+
+        document.addEventListener('click', handleAnchorClick);
+        return () => document.removeEventListener('click', handleAnchorClick);
+    }, [pathname]);
+
     return (
         <div className="flex min-h-screen flex-col">
             <Navbar />

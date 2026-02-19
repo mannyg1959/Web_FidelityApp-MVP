@@ -7,26 +7,6 @@ import DashboardScreen from './DashboardScreen';
 import PricingScreen from './PricingScreen';
 
 const LandingPage = () => {
-    useEffect(() => {
-        // Smooth scroll implementation for anchor links
-        const handleAnchorClick = (e) => {
-            const target = e.target.closest('a');
-            if (target && target.hash && target.hash.startsWith('#')) {
-                e.preventDefault();
-                const element = document.querySelector(target.hash);
-                if (element) {
-                    window.scrollTo({
-                        top: element.offsetTop - 80, // Offset for sticky header
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        };
-
-        document.addEventListener('click', handleAnchorClick);
-        return () => document.removeEventListener('click', handleAnchorClick);
-    }, []);
-
     return (
         <div className="flex flex-col overflow-x-hidden bg-background-light text-text-main mesh-gradient">
             <section id="inicio">
