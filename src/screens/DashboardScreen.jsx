@@ -87,7 +87,7 @@ const DashboardScreen = () => {
                                                 <div className="px-2 py-1 rounded bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider">ROI Estimado</div>
                                             </div>
                                             <h3 className="text-3xl font-black mb-2 text-primary">x4.5</h3>
-                                            <p className="text-slate-400 text-sm mb-6 leading-relaxed">Retorno de inversión promedio por cada sol invertido en premios.</p>
+                                            <p className="text-slate-400 text-sm mb-6 leading-relaxed">Retorno de inversión promedio por cada dólar invertido en premios.</p>
 
                                             <div className="space-y-3">
                                                 <div className="flex justify-between text-xs">
