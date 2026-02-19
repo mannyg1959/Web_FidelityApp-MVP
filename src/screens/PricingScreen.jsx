@@ -52,15 +52,12 @@ const PricingScreen = () => {
                         </div>
                         {/* Growth */}
                         <div className="bg-slate-900 dark:bg-slate-800 rounded-[2rem] p-10 border-4 border-primary flex flex-col h-full shadow-2xl relative transform scale-105 z-10">
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-[#102216] px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">
-                                MÁS POPULAR
-                            </div>
                             <div className="mb-8">
                                 <h3 className="text-xl font-bold mb-2 text-white">Growth</h3>
                                 <p className="text-slate-400 text-sm">Para negocios en expansión.</p>
                             </div>
                             <div className="mb-4 text-white">
-                                <span className="text-5xl font-black">$59</span>
+                                <span className="text-5xl font-black">$20</span>
                                 <span className="text-slate-400">/mes</span>
                             </div>
                             <div className="mb-8 p-3 rounded-xl bg-white/10 border border-white/20">
@@ -81,6 +78,10 @@ const PricingScreen = () => {
                                 <li className="flex gap-3 text-sm items-center">
                                     <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
                                     <span>Campañas automáticas</span>
+                                </li>
+                                <li className="flex gap-3 text-sm items-center">
+                                    <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
+                                    <span>Control de Inventarios</span>
                                 </li>
                                 <li className="flex gap-3 text-sm items-center">
                                     <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
