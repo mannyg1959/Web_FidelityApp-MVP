@@ -26,7 +26,7 @@ const PricingScreen = () => {
                                 <p className="text-slate-500 text-sm">Ideal para pequeños negocios locales.</p>
                             </div>
                             <div className="mb-4">
-                                <span className="text-5xl font-black">$29</span>
+                                <span className="text-5xl font-black">$12</span>
                                 <span className="text-slate-400">/mes</span>
                             </div>
                             <div className="mb-8 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
@@ -42,7 +42,7 @@ const PricingScreen = () => {
                                 </li>
                                 <li className="flex gap-3 text-sm items-center">
                                     <span className="material-symbols-outlined text-primary">check_circle</span>
-                                    <span>Mensajería tipo Push (<span className="italic">Push</span>)</span>
+                                    <span>Mensajería tipo Push</span>
                                 </li>
                                 <li className="flex gap-3 text-sm items-center">
                                     <span className="material-symbols-outlined text-primary">check_circle</span>
