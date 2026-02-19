@@ -116,21 +116,21 @@ const BenefitsScreen = () => {
                                         <span className="material-symbols-outlined text-sm">star</span>
                                         <span className="material-symbols-outlined text-sm">star</span>
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4 dark:text-white">Kiosko "El Faro"</h3>
+                                    <h3 className="text-2xl font-bold mb-4 dark:text-white">Kiosko "Santa Ana"</h3>
                                     <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed italic">
-                                        "En un kiosco el tiempo es oro. Con Kpoint capturamos 1,500 clientes en un mes sin demorar la fila. La recurrencia ha subido un 40% porque los clientes están motivados a completar su monedero."
+                                        "Desde que implementamos Kpoint, nuestros clientes no solo vuelven más seguido, sino que ya no pierden sus puntos. El registro con el número de teléfono es tan rápido que no ralentiza la atención en horas pico."
                                     </p>
                                     <div className="grid grid-cols-3 gap-4 pt-6 border-t dark:border-slate-700">
                                         <div>
-                                            <p className="text-2xl font-black text-primary">+40%</p>
+                                            <p className="text-2xl font-black text-primary">+45%</p>
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Recurrencia</p>
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-black text-primary">15s</p>
+                                            <p className="text-2xl font-black text-primary">12s</p>
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Registro</p>
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-black text-primary">1.5k</p>
+                                            <p className="text-2xl font-black text-primary">2.1k</p>
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Clientes</p>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@ const BenefitsScreen = () => {
                             </div>
                             <div className="bg-white dark:bg-slate-800 rounded-[2.5rem] p-8 md:p-10 shadow-xl border border-slate-100 dark:border-slate-700 relative overflow-hidden group transition-all hover:shadow-2xl">
                                 <div className="absolute top-0 right-0 p-6">
-                                    <span className="material-symbols-outlined text-6xl text-orange-500/10 group-hover:scale-110 transition-transform">coffee</span>
+                                    <span className="material-symbols-outlined text-6xl text-orange-500/10 group-hover:scale-110 transition-transform">lunch_dining</span>
                                 </div>
                                 <div className="relative z-10">
                                     <div className="flex items-center gap-1 mb-6 text-primary">
@@ -148,22 +148,22 @@ const BenefitsScreen = () => {
                                         <span className="material-symbols-outlined text-sm">star</span>
                                         <span className="material-symbols-outlined text-sm">star</span>
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4 dark:text-white">Eco Café Central</h3>
+                                    <h3 className="text-2xl font-bold mb-4 dark:text-white">Burgers "El Garage"</h3>
                                     <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed italic">
-                                        "Pasamos de tarjetas de sellos perdidas a un sistema 100% digital. Ahora conocemos los gustos de nuestros clientes y podemos enviarles ofertas cuando el local está tranquilo."
+                                        "Al ser un negocio móvil, necesitamos algo que funcione en cualquier lugar. Mis clientes aman recibir notificaciones de dónde estamos y cuántos puntos les faltan para su próxima hamburguesa gratis."
                                     </p>
                                     <div className="grid grid-cols-3 gap-4 pt-6 border-t dark:border-slate-700">
                                         <div>
-                                            <p className="text-2xl font-black text-primary">x2.4</p>
+                                            <p className="text-2xl font-black text-primary">x2.1</p>
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Visitas</p>
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-black text-primary">+15%</p>
+                                            <p className="text-2xl font-black text-primary">+25%</p>
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Ticket</p>
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-black text-primary">-90%</p>
-                                            <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Papel</p>
+                                            <p className="text-2xl font-black text-primary">85%</p>
+                                            <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Lealtad</p>
                                         </div>
                                     </div>
                                 </div>
