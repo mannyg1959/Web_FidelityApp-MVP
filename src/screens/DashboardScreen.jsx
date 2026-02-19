@@ -76,18 +76,18 @@ const DashboardScreen = () => {
                                 </div>
 
                                 {/* Persuasive ROI/Retention Graphic - Spans 4/12 on LG */}
-                                <div className="lg:col-span-4 flex flex-col gap-6">
+                                <div className="lg:col-span-4 flex flex-col gap-4">
                                     {/* Retention ROI Card */}
-                                    <div className="bg-slate-900 rounded-[2rem] p-8 text-white shadow-2xl relative overflow-hidden group">
+                                    <div className="bg-slate-900 rounded-[1.5rem] p-6 text-white shadow-2xl relative overflow-hidden group">
                                         <div className="absolute top-0 right-0 p-4 opacity-10 transform translate-x-4 -translate-y-4">
-                                            <span className="material-symbols-outlined text-8xl">trending_up</span>
+                                            <span className="material-symbols-outlined text-6xl">trending_up</span>
                                         </div>
                                         <div className="relative z-10">
                                             <div className="flex items-center gap-2 mb-4">
                                                 <div className="px-2 py-1 rounded bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider">ROI Estimado</div>
                                             </div>
-                                            <h3 className="text-3xl font-black mb-2 text-primary">x4.5</h3>
-                                            <p className="text-slate-400 text-sm mb-6 leading-relaxed">Retorno de inversión promedio por cada dólar invertido en premios.</p>
+                                            <h3 className="text-2xl font-black mb-1 text-primary">x4.5</h3>
+                                            <p className="text-slate-400 text-xs mb-4 leading-relaxed">Retorno de inversión promedio por cada dólar invertido en premios.</p>
 
                                             <div className="space-y-3">
                                                 <div className="flex justify-between text-xs">
@@ -102,14 +102,14 @@ const DashboardScreen = () => {
                                     </div>
 
                                     {/* Growth Signal Card */}
-                                    <div className="bg-white dark:bg-slate-800 rounded-[2rem] p-6 border border-slate-100 dark:border-slate-700 shadow-xl flex items-center gap-5">
-                                        <div className="size-14 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-500">
+                                    <div className="bg-white dark:bg-slate-800 rounded-[1.5rem] p-5 border border-slate-100 dark:border-slate-700 shadow-xl flex items-center gap-4">
+                                        <div className="size-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-500">
                                             <span className="material-symbols-outlined text-3xl">diversity_3</span>
                                         </div>
                                         <div>
                                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Comunidad</p>
-                                            <p className="text-xl font-black dark:text-white">+2,400</p>
-                                            <p className="text-xs text-slate-500">Nuevos fans mensuales</p>
+                                            <p className="text-lg font-black dark:text-white">+2,400</p>
+                                            <p className="text-[10px] text-slate-500">Nuevos fans mensuales</p>
                                         </div>
                                     </div>
                                 </div>
@@ -117,14 +117,14 @@ const DashboardScreen = () => {
                         </div>
                     </section>
                     <section className="py-12 px-4 md:px-8">
-                        <div className="max-w-4xl mx-auto bg-primary rounded-[3rem] p-12 text-center text-slate-900 overflow-hidden relative">
-                            <div className="absolute top-0 left-0 p-8 opacity-20 pointer-events-none">
-                                <span className="material-symbols-outlined text-[200px]">hub</span>
+                        <div className="max-w-3xl mx-auto bg-primary rounded-[2.5rem] p-8 md:p-10 text-center text-slate-900 overflow-hidden relative">
+                            <div className="absolute top-0 left-0 p-6 opacity-20 pointer-events-none">
+                                <span className="material-symbols-outlined text-[150px]">hub</span>
                             </div>
-                            <h2 className="text-3xl md:text-5xl font-black mb-6 relative z-10 italic">Tus datos nunca se vieron tan bien.</h2>
-                            <p className="text-xl mb-8 relative z-10 font-medium">Toma decisiones basadas en evidencias, no en suposiciones.</p>
-                            <Link to="/pricing" className="inline-flex h-14 px-8 items-center justify-center rounded-2xl bg-slate-900 text-white font-bold text-lg hover:bg-black transition-all relative z-10">
-                                Probar gratis por 14 días
+                            <h2 className="text-2xl md:text-4xl font-black mb-4 relative z-10 italic">Tus datos nunca se vieron tan bien.</h2>
+                            <p className="text-lg mb-6 relative z-10 font-medium">Toma decisiones basadas en evidencias, no en suposiciones.</p>
+                            <Link to="/pricing" className="inline-flex h-12 px-8 items-center justify-center rounded-2xl bg-slate-900 text-white font-bold text-base hover:bg-black transition-all relative z-10">
+                                Probar gratis por 30 días
                             </Link>
                         </div>
                     </section>
