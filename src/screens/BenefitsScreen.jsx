@@ -118,7 +118,7 @@ const BenefitsScreen = () => {
                                     </div>
                                     <h3 className="text-2xl font-bold mb-4 dark:text-white">Kiosko "Santa Ana"</h3>
                                     <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed italic">
-                                        "La verdad es que nos cambió la vida. Antes los clientes perdían las tarjetas de cartón y se desanimaban. Ahora, con solo darnos su número, ya están sumando. Lo mejor es que en plena hora pico no nos quita ni 10 segundos."
+                                        "La verdad es que con Kpoint, nuestros clientes se sienten mas motivados a volver. Con solo escanear su código QR , suman y cajean sus puntos ... Lo mejor es que en plena hora pico no nos quita ni 10 segundos."
                                     </p>
                                     <div className="grid grid-cols-3 gap-4 pt-6 border-t dark:border-slate-700">
                                         <div>
@@ -126,7 +126,7 @@ const BenefitsScreen = () => {
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Recurrencia</p>
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-black text-primary">12s</p>
+                                            <p className="text-2xl font-black text-primary">10s</p>
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Registro</p>
                                         </div>
                                         <div>
@@ -148,21 +148,21 @@ const BenefitsScreen = () => {
                                         <span className="material-symbols-outlined text-sm">star</span>
                                         <span className="material-symbols-outlined text-sm">star</span>
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4 dark:text-white">Burgers "El Garage"</h3>
+                                    <h3 className="text-2xl font-bold mb-4 dark:text-white">GalaxyBurguers</h3>
                                     <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed italic">
-                                        "Como siempre nos estamos moviendo, necesitaba algo digital que no fuera un lío. A la gente le encanta que les llegue el aviso de dónde estamos parqueados hoy y ver que ya les falta poco para su hamburguesa de regalo."
+                                        "Nuestros clientes aman sumar puntos con cada hamburguesa y perro caliente. Pasamos de ser un simple puesto de comida rápida a ser su parada obligatoria de todas las semanas."
                                     </p>
                                     <div className="grid grid-cols-3 gap-4 pt-6 border-t dark:border-slate-700">
                                         <div>
-                                            <p className="text-2xl font-black text-primary">x2.1</p>
+                                            <p className="text-2xl font-black text-primary">x2.8</p>
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Visitas</p>
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-black text-primary">+25%</p>
+                                            <p className="text-2xl font-black text-primary">+30%</p>
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Ticket</p>
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-black text-primary">85%</p>
+                                            <p className="text-2xl font-black text-primary">92%</p>
                                             <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Lealtad</p>
                                         </div>
                                     </div>
