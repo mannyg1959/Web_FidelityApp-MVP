@@ -1,135 +1,196 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useReveal } from '../hooks/useReveal';
 
 const DashboardScreen = () => {
+    useReveal();
+
     return (
-        <div className="antialiased selection:bg-primary selection:text-slate-900 overflow-x-hidden">
-            <div className="flex flex-col">
-                <main className="flex-grow">
-                    <section className="relative pt-10 pb-12 md:pt-14 md:pb-16 overflow-hidden">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl">
-                            <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary/20 blur-[120px] rounded-full"></div>
-                            <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-400/10 blur-[120px] rounded-full"></div>
-                        </div>
-                        <div className="relative z-10 px-4 md:px-8 mx-auto max-w-7xl">
-                            <div className="text-center mb-10">
-                                <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-4">
-                                    Control total de tu <span className="text-primary italic">crecimiento</span>
-                                </h1>
-                                <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                                    Visualiza en tiempo real el comportamiento de tus clientes, la efectividad de tus premios y el retorno de inversión de tu programa.
-                                </p>
+        <div className="antialiased bg-background-light overflow-x-hidden">
+            <main className="flex-grow">
+                <section className="reveal relative pt-20 pb-16 px-6">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] max-w-7xl">
+                        <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[60%] bg-primary/10 blur-[150px] rounded-full"></div>
+                        <div className="absolute bottom-0 left-[-5%] w-[60%] h-[60%] bg-blue-400/5 blur-[150px] rounded-full"></div>
+                    </div>
+
+                    <div className="relative z-10 mx-auto max-w-7xl">
+                        <div className="text-center space-y-8 mb-20">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-black uppercase tracking-widest">
+                                Inteligencia de Negocio
                             </div>
-                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-6xl mx-auto">
-                                {/* Main Dashboard Mockup - Now spans 8/12 on LG */}
-                                <div className="lg:col-span-8 relative group">
-                                    <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-400 rounded-[2.5rem] blur opacity-15 group-hover:opacity-30 transition duration-1000"></div>
-                                    <div className="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[2rem] shadow-2xl overflow-hidden">
-                                        <div className="flex h-[350px] md:h-[400px]">
-                                            {/* Sidebar Mockup */}
-                                            <div className="hidden md:flex w-48 bg-slate-50 dark:bg-slate-950 border-r dark:border-slate-800 p-5 flex-col gap-6">
-                                                <div className="flex items-center gap-2">
-                                                    <div className="size-6 rounded-lg bg-primary"></div>
-                                                    <div className="h-3 w-20 bg-slate-200 dark:bg-slate-800 rounded"></div>
-                                                </div>
-                                                <div className="space-y-3">
-                                                    <div className="h-3 w-full bg-primary/20 rounded"></div>
-                                                    <div className="h-3 w-3/4 bg-slate-200 dark:bg-slate-800 rounded"></div>
-                                                    <div className="h-3 w-5/6 bg-slate-200 dark:bg-slate-800 rounded"></div>
-                                                </div>
+                            <h1 className="text-4xl md:text-5xl font-black tracking-tight text-text-main leading-none">
+                                Control total de tu <br />
+                                <span className="text-primary italic">crecimiento</span>
+                            </h1>
+                            <p className="text-xl md:text-2xl text-text-muted font-medium max-w-3xl mx-auto leading-relaxed">
+                                Visualiza lo que importa. Tus datos convertidos en decisiones estratégicas para escalar tu programa de lealtad al siguiente nivel.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-7xl mx-auto">
+                            {/* Main Dashboard Mockup - LARGER */}
+                            <div className="reveal-left lg:col-span-9 relative group perspective-1000">
+                                <div className="absolute -inset-2 bg-gradient-to-r from-primary to-orange-400 rounded-[4rem] blur-2xl opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                                <div className="relative bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[3.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-700 hover:rotate-y-2">
+                                    <div className="flex h-[550px] md:h-[650px]">
+                                        {/* Sidebar Mockup */}
+                                        <div className="hidden md:flex w-64 bg-slate-50 dark:bg-slate-950 border-r border-slate-100 dark:border-slate-800 p-8 flex-col gap-10">
+                                            <div className="flex items-center gap-3">
+                                                <div className="size-8 rounded-xl bg-primary shadow-lg shadow-primary/20"></div>
+                                                <div className="h-4 w-28 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
                                             </div>
-                                            {/* Main Dashboard Content Mockup */}
-                                            <div className="flex-1 p-6 overflow-hidden">
-                                                <div className="flex justify-between items-center mb-6">
-                                                    <div className="h-6 w-32 bg-slate-100 dark:bg-slate-800 rounded-lg"></div>
-                                                    <div className="h-8 w-8 rounded-full bg-slate-100 dark:bg-slate-800"></div>
+                                            <div className="space-y-6">
+                                                {[1,2,3,4].map(i => (
+                                                    <div key={i} className={`h-4 w-full rounded-full ${i === 1 ? 'bg-primary/20' : 'bg-slate-100 dark:bg-slate-800'}`}></div>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {/* Main Dashboard Content Mockup */}
+                                        <div className="flex-1 p-10 space-y-10 overflow-hidden">
+                                            <div className="flex justify-between items-center">
+                                                <div className="h-8 w-48 bg-slate-100 dark:bg-slate-800 rounded-2xl animate-pulse"></div>
+                                                <div className="size-12 rounded-[1.2rem] bg-slate-50 dark:bg-slate-800 border border-slate-100"></div>
+                                            </div>
+
+                                            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                                                {[
+                                                    { label: 'Retención', val: '+84%', color: 'text-text-main', bg: 'bg-orange-50/50', border: 'border-orange-100', progress: 'w-[84%]' },
+                                                    { label: 'Actividad', val: '1.2k', color: 'text-primary', bg: 'bg-blue-50/50', border: 'border-blue-100', progress: 'w-[65%]' },
+                                                    { label: 'Impacto', val: '+24%', color: 'text-green-500', bg: 'bg-green-50/50', border: 'border-green-100', progress: 'w-[40%]' }
+                                                ].map((stat, i) => (
+                                                    <div key={i} className={`p-8 rounded-[2.5rem] ${stat.bg} border ${stat.border} shadow-sm group/stat transition-all hover:shadow-xl hover:scale-105 hover:bg-white duration-500 relative overflow-hidden`}>
+                                                        <div className="relative z-10">
+                                                            <p className="text-[10px] text-text-muted font-black uppercase tracking-[0.2em] mb-4">{stat.label}</p>
+                                                            <p className={`text-4xl font-black ${stat.color} leading-none tracking-tighter mb-4`}>{stat.val}</p>
+                                                            <div className="h-1.5 w-full bg-slate-200/50 rounded-full overflow-hidden">
+                                                                <div className={`h-full bg-primary ${stat.color.replace('text-', 'bg-')}`} style={{ width: stat.progress.match(/\d+/)[0] + '%' }}></div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="absolute -bottom-4 -right-4 size-20 bg-primary/5 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
+                                                    </div>
+                                                ))}
+                                            </div>
+
+                                            <div className="space-y-6">
+                                                <div className="flex items-center justify-between">
+                                                    <div className="h-6 w-1/4 bg-slate-100 dark:bg-slate-800 rounded-full"></div>
+                                                    <div className="flex gap-2">
+                                                        <div className="size-2 rounded-full bg-primary/20 animate-pulse"></div>
+                                                        <div className="size-2 rounded-full bg-primary/20 animate-pulse delay-150"></div>
+                                                    </div>
                                                 </div>
-                                                <div className="grid grid-cols-3 gap-4 mb-6">
-                                                    <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border dark:border-slate-700">
-                                                        <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Visitas</p>
-                                                        <p className="text-xl font-black">124</p>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center bg-slate-50 dark:bg-slate-800/50 rounded-[2.5rem] p-8 border border-slate-100 dark:border-slate-700">
+                                                    {/* Radial Chart */}
+                                                    <div className="relative size-40 md:size-48 mx-auto flex items-center justify-center group">
+                                                        <svg className="size-full -rotate-90" viewBox="0 0 100 100">
+                                                            <circle cx="50" cy="50" r="40" stroke="#f1f5f9" strokeWidth="8" fill="none" />
+                                                            <circle cx="50" cy="50" r="40" stroke="#FF7043" strokeWidth="8" fill="none" strokeDasharray="251.2" strokeDashoffset="50.2" strokeLinecap="round" className="drop-shadow-[0_0_15px_rgba(255,112,67,0.4)]" />
+                                                            <circle cx="50" cy="50" r="30" stroke="#0F172A" strokeWidth="6" fill="none" strokeDasharray="188.4" strokeDashoffset="60" strokeLinecap="round" />
+                                                        </svg>
+                                                        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                                                            <span className="text-3xl font-black text-text-main leading-none">85%</span>
+                                                            <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-1">Retención</span>
+                                                        </div>
                                                     </div>
-                                                    <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border dark:border-slate-700">
-                                                        <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Canjes</p>
-                                                        <p className="text-xl font-black text-primary">18</p>
-                                                    </div>
-                                                    <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border dark:border-slate-700">
-                                                        <p className="text-[10px] text-slate-400 font-bold uppercase mb-1">Impacto</p>
-                                                        <p className="text-xl font-black text-blue-500">+12%</p>
-                                                    </div>
-                                                </div>
-                                                <div className="space-y-4">
-                                                    <div className="h-4 w-1/4 bg-slate-100 dark:bg-slate-800 rounded"></div>
-                                                    <div className="relative h-32 w-full rounded-xl bg-slate-50 dark:bg-slate-800/50 border dark:border-slate-700 flex items-end p-3 gap-2">
-                                                        <div className="flex-1 bg-primary/40 rounded-t h-[40%]"></div>
-                                                        <div className="flex-1 bg-primary/60 rounded-t h-[65%]"></div>
-                                                        <div className="flex-1 bg-primary/40 rounded-t h-[50%]"></div>
-                                                        <div className="flex-1 bg-primary/80 rounded-t h-[85%]"></div>
-                                                        <div className="flex-1 bg-primary rounded-t h-[100%]"></div>
-                                                        <div className="flex-1 bg-primary/70 rounded-t h-[75%]"></div>
-                                                        <div className="flex-1 bg-primary/50 rounded-t h-[60%]"></div>
+
+                                                    {/* Legend & Small Data Widgets */}
+                                                    <div className="space-y-6">
+                                                        <div className="space-y-4">
+                                                            <div className="flex items-center gap-3">
+                                                                <div className="size-3 rounded-full bg-primary shadow-lg shadow-primary/40"></div>
+                                                                <p className="text-xs font-bold text-text-muted">Clientes Frecuentes <span className="text-text-main ml-1 font-black">+12%</span></p>
+                                                            </div>
+                                                            <div className="flex items-center gap-3">
+                                                                <div className="size-3 rounded-full bg-[#0F172A]"></div>
+                                                                <p className="text-xs font-bold text-text-muted">Canjes Hoy <span className="text-text-main ml-1 font-black">1.2k</span></p>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        {/* Activity Grid */}
+                                                        <div className="space-y-3 pt-4 border-t border-slate-100">
+                                                            <div className="flex justify-between text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                                                                <span>Actividad Live</span>
+                                                                <span className="text-primary italic">En tiempo real</span>
+                                                            </div>
+                                                            <div className="grid grid-cols-5 gap-2">
+                                                                {[1, 0.5, 0.8, 0.4, 0.9, 0.7, 0.3, 1, 0.6, 0.8].map((o, i) => (
+                                                                    <div key={i} className="h-1.5 rounded-full bg-primary/10 overflow-hidden">
+                                                                        <div className="h-full bg-primary" style={{ width: `${o * 100}%` }}></div>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                {/* Persuasive ROI/Retention Graphic - Spans 4/12 on LG */}
-                                <div className="lg:col-span-4 flex flex-col gap-4">
-                                    {/* Retention ROI Card */}
-                                    <div className="bg-slate-900 rounded-[1.5rem] p-6 text-white shadow-2xl relative overflow-hidden group">
-                                        <div className="absolute top-0 right-0 p-4 opacity-10 transform translate-x-4 -translate-y-4">
-                                            <span className="material-symbols-outlined text-6xl">trending_up</span>
+                            {/* Sidebar Insights - SMALLER */}
+                            <div className="reveal-right lg:col-span-3 flex flex-col gap-6 md:pt-12">
+                                {/* ROI Card */}
+                                <div className="bg-text-main rounded-[2.5rem] p-6 md:p-8 text-white shadow-3xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-500">
+                                    <div className="absolute top-0 right-0 p-6 opacity-5 rotate-12 pointer-events-none">
+                                        <span className="material-symbols-outlined text-[80px] font-bold">trending_up</span>
+                                    </div>
+                                    <div className="relative z-10 space-y-4">
+                                        <div className="inline-flex px-3 py-1 rounded-lg bg-primary/20 text-primary text-[10px] font-black uppercase tracking-widest border border-primary/20 w-fit">RETORNO</div>
+                                        <div className="space-y-0.5">
+                                            <h3 className="text-4xl font-black text-white">x4.8</h3>
+                                            <p className="text-slate-400 text-sm font-medium leading-tight">Frecuencia de compra.</p>
                                         </div>
-                                        <div className="relative z-10">
-                                            <div className="flex items-center gap-2 mb-4">
-                                                <div className="px-2 py-1 rounded bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider">ROI Estimado</div>
+                                        <div className="pt-4 border-t border-white/10 space-y-3">
+                                            <div className="flex justify-between items-end">
+                                                <span className="text-[10px] font-bold text-slate-300">Retención</span>
+                                                <span className="text-xl font-black text-primary">+85%</span>
                                             </div>
-                                            <h3 className="text-2xl font-black mb-1 text-primary">x4.5</h3>
-                                            <p className="text-slate-400 text-xs mb-4 leading-relaxed">Retorno de inversión promedio por cada dólar invertido en premios.</p>
-
-                                            <div className="space-y-3">
-                                                <div className="flex justify-between text-xs">
-                                                    <span>Retención de Clientes</span>
-                                                    <span className="text-primary">+85%</span>
-                                                </div>
-                                                <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
-                                                    <div className="h-full w-[85%] bg-primary shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
-                                                </div>
+                                            <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                                <div className="h-full w-[85%] bg-primary shadow-[0_0_15px_rgba(255,112,67,0.5)] rounded-full"></div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    {/* Growth Signal Card */}
-                                    <div className="bg-white dark:bg-slate-800 rounded-[1.5rem] p-5 border border-slate-100 dark:border-slate-700 shadow-xl flex items-center gap-4">
-                                        <div className="size-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-500">
-                                            <span className="material-symbols-outlined text-3xl">diversity_3</span>
-                                        </div>
-                                        <div>
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Comunidad</p>
-                                            <p className="text-lg font-black dark:text-white">+2,400</p>
-                                            <p className="text-[10px] text-slate-500">Nuevos fans mensuales</p>
-                                        </div>
+                                {/* Community Growth Card */}
+                                <div className="bg-white rounded-[3rem] p-8 border border-slate-100 shadow-xl flex items-center gap-6 group hover:shadow-2xl transition-all">
+                                    <div className="size-20 rounded-[2rem] bg-orange-50 flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform">
+                                        <span className="material-symbols-outlined text-4xl font-bold">diversity_3</span>
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-black text-text-muted uppercase tracking-[0.2em] mb-1">Fan Base</p>
+                                        <p className="text-3xl font-black text-text-main">+2.4k</p>
+                                        <p className="text-sm text-text-muted font-bold">Miembros nuevos este mes</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section className="py-12 px-4 md:px-8">
-                        <div className="max-w-3xl mx-auto bg-primary rounded-[2.5rem] p-8 md:p-10 text-center text-slate-900 overflow-hidden relative">
-                            <div className="absolute top-0 left-0 p-6 opacity-20 pointer-events-none">
-                                <span className="material-symbols-outlined text-[150px]">hub</span>
-                            </div>
-                            <h2 className="text-2xl md:text-4xl font-black mb-4 relative z-10 italic">Tus datos nunca se vieron tan bien.</h2>
-                            <p className="text-lg mb-6 relative z-10 font-medium">Toma decisiones basadas en evidencias, no en suposiciones.</p>
-                            <a href="https://fidelity-app-mvp.vercel.app/" className="inline-flex h-12 px-8 items-center justify-center rounded-2xl bg-slate-900 text-white font-bold text-base hover:bg-black transition-all relative z-10">
-                                Probar gratis por 30 días
+                    </div>
+                </section>
+
+                {/* Bottom CTA */}
+                <section className="reveal py-12 px-6">
+                    <div className="max-w-2xl mx-auto bg-blue-600 rounded-[1.5rem] p-8 md:p-10 text-center text-white overflow-hidden relative shadow-lg shadow-blue-900/20">
+                        <div className="absolute top-0 left-0 p-8 opacity-10 pointer-events-none rotate-12">
+                            <span className="material-symbols-outlined text-[120px] font-bold">hub</span>
+                        </div>
+                        <div className="relative z-10 space-y-4">
+                            <h2 className="text-2xl md:text-3xl font-black tracking-tight leading-tight italic">
+                                Tus datos nunca se vieron tan bien.
+                            </h2>
+                            <p className="text-blue-100 text-base max-w-sm mx-auto">
+                                Deja de adivinar. Empieza a medir y escala tu negocio basado en evidencias reales.
+                            </p>
+                            <a href="https://fidelity-app-mvp.vercel.app/" className="interactive-button group inline-flex h-12 px-8 items-center justify-center rounded-xl bg-white text-blue-600 font-black text-lg hover:bg-blue-50 transition-all shadow-lg">
+                                <span>Ver Demo Gratis</span>
+                                <span className="material-symbols-outlined ml-2 text-primary group-hover:translate-x-1 transition-transform font-bold">rocket_launch</span>
                             </a>
                         </div>
-                    </section>
-                </main>
-            </div>
+                    </div>
+                </section>
+            </main>
         </div>
     );
 };

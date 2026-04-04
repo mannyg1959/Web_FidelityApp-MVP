@@ -8,7 +8,11 @@ const NavLink = ({ to, children, onClick }) => {
         <Link
             to={to}
             onClick={onClick}
-            className={`text-sm font-medium transition-colors hover:text-primary-dark ${isActive ? 'text-primary font-bold' : 'text-text-main dark:text-gray-300'}`}
+            className={`
+                relative px-3 py-2 rounded-lg text-sm font-bold transition-all duration-300 
+                hover:bg-white/20 hover:scale-105 hover:shadow-lg
+                ${isActive ? 'bg-white text-[#FF7043] shadow-md scale-105' : 'text-white/90 hover:text-white'}
+            `}
         >
             {children}
         </Link>
@@ -25,32 +29,33 @@ export const Navbar = () => {
     }, [pathname]);
 
     return (
-        <header className="sticky top-0 z-[100] flex items-center justify-between border-b border-[#e5ebe7]/50 bg-white/80 dark:bg-background-dark/80 px-6 py-4 backdrop-blur-md md:px-12 lg:px-20">
+        <header className="sticky top-0 z-[100] flex items-center justify-between border-b border-slate-100 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 px-6 py-4 backdrop-blur-md md:px-12 lg:px-20">
             <Link to="/" className="flex items-center gap-2 transform transition-transform hover:scale-105 active:scale-95">
                 <img
                     src="/logo_kpoint.png"
                     alt="Kpoint Logo"
-                    className="h-9 w-auto object-contain"
+                    className="h-14 w-auto object-contain"
                 />
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden items-center gap-8 md:flex">
-                <a href="/#inicio" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Inicio</a>
-                <a href="/#solucion" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Solución</a>
-                <a href="/#como-funciona" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Cómo funciona</a>
-                <a href="/#beneficios" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Beneficios</a>
-                <a href="/#dashboard" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Dashboard</a>
-                <a href="/#precios" className="text-sm font-medium transition-colors hover:text-primary-dark text-text-main dark:text-gray-300 hover:text-primary">Precios</a>
+                <a href="/#inicio" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Inicio</a>
+                <a href="/#solucion" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Solución</a>
+                <a href="/#como-funciona" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Cómo funciona</a>
+                <a href="/#beneficios" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Beneficios</a>
+                <a href="/#dashboard" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Dashboard</a>
+                <a href="/#precios" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Precios</a>
             </nav>
 
             <div className="flex items-center gap-3">
-                <button className="hidden cursor-pointer rounded-lg px-4 py-2 text-sm font-semibold text-text-main dark:text-white transition-colors hover:bg-background-subtle md:block">
+                <button className="hidden cursor-pointer rounded-lg px-4 py-2 text-sm font-bold text-slate-600 dark:text-slate-400 transition-colors hover:text-primary md:block">
                     Iniciar sesión
                 </button>
-                <a href="https://fidelity-app-mvp.vercel.app/" className="hidden md:flex cursor-pointer items-center justify-center rounded-lg bg-text-main px-4 py-2 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-black hover:shadow-xl dark:bg-primary dark:text-background-dark">
+                <a href="https://fidelity-app-mvp.vercel.app/" className="hidden md:flex cursor-pointer items-center justify-center rounded-lg bg-primary px-6 py-2.5 text-sm font-black text-white shadow-[0_10px_20px_-5px_rgba(255,112,67,0.4)] transition-all hover:scale-105 hover:shadow-[0_20px_30px_-10px_rgba(255,112,67,0.5)] active:scale-95">
                     Empezar gratis
                 </a>
+                
 
                 {/* Mobile Menu Button */}
                 <button
@@ -65,20 +70,20 @@ export const Navbar = () => {
 
             {/* Mobile Navigation Overlay */}
             {isMenuOpen && (
-                <div className="fixed inset-x-0 top-[73px] z-[90] flex h-[calc(100vh-73px)] flex-col bg-white p-6 dark:bg-background-dark md:hidden">
+                <div className="fixed inset-x-0 top-[73px] z-[90] flex h-[calc(100vh-73px)] flex-col bg-white dark:bg-slate-900 p-6 md:hidden">
                     <nav className="flex flex-col gap-6 text-lg">
-                        <a href="/#inicio" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Inicio</a>
-                        <a href="/#solucion" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Solución</a>
-                        <a href="/#como-funciona" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Cómo funciona</a>
-                        <a href="/#beneficios" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Beneficios</a>
-                        <a href="/#dashboard" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Dashboard</a>
-                        <a href="/#precios" onClick={() => setIsMenuOpen(false)} className="text-text-main dark:text-white hover:text-primary transition-colors">Precios</a>
+                        <a href="/#inicio" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Inicio</a>
+                        <a href="/#solucion" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Solución</a>
+                        <a href="/#como-funciona" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Cómo funciona</a>
+                        <a href="/#beneficios" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Beneficios</a>
+                        <a href="/#dashboard" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Dashboard</a>
+                        <a href="/#precios" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Precios</a>
                     </nav>
                     <div className="mt-auto flex flex-col gap-4">
-                        <button className="w-full rounded-xl bg-background-subtle py-4 font-bold text-text-main dark:text-white">
+                        <button className="w-full rounded-2xl bg-slate-100 dark:bg-slate-800 py-4 font-black text-slate-700 dark:text-white">
                             Iniciar sesión
                         </button>
-                        <a href="https://fidelity-app-mvp.vercel.app/" onClick={() => setIsMenuOpen(false)} className="flex w-full items-center justify-center rounded-xl bg-primary py-4 font-bold text-background-dark">
+                        <a href="https://fidelity-app-mvp.vercel.app/" onClick={() => setIsMenuOpen(false)} className="flex w-full items-center justify-center rounded-2xl bg-primary py-4 font-black text-white shadow-xl">
                             Empezar gratis
                         </a>
                     </div>

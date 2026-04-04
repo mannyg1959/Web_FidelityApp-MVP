@@ -8,14 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary": "#2bee6c",
-        "primary-dark": "#23c258",
+        "primary": "#ff7043", // Vibrant Deep Orange
+        "primary-dark": "#e64a19", // Rich Terracotta
         "background-light": "#ffffff",
-        "background-subtle": "#f6f9f7",
-        "background-dark": "#102216",
-        "surface-dark": "#163321",
-        "text-main": "#111813",
-        "text-muted": "#52665a",
+        "background-subtle": "#fffbf7", // Warm Paper
+        "background-dark": "#1a1614", // Deep Cocoa Night
+        "surface-dark": "#2d241f", // Warm Charcoal
+        "text-main": "#261c15", // Espresso Black
+        "text-muted": "#7a6a5f", // Warm Taupe
         "surface-light": "#ffffff",
       },
       fontFamily: {

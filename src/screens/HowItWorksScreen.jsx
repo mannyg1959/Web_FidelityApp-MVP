@@ -1,162 +1,170 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useReveal } from '../hooks/useReveal';
 
 const HowItWorksScreen = () => {
+    useReveal();
+
     return (
-        <div className="antialiased">
-            <main className="flex-grow">
-                <section className="relative overflow-hidden pt-12 pb-6 sm:pt-16 sm:pb-8 px-4">
+        <div className="antialiased bg-background-light">
+            <main className="flex-grow overflow-x-hidden">
+                {/* Hero Section */}
+                <section className="reveal relative overflow-hidden pt-24 pb-12 px-6">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
                     <div className="mx-auto max-w-7xl">
-                        <div className="text-center">
-                            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
-                                Tu programa de lealtad en <span className="text-primary italic">tres simples pasos</span>
+                        <div className="text-center space-y-8">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-orange-600 text-xs font-bold uppercase tracking-widest">
+                                Simplicidad Radical
+                            </div>
+                            <h1 className="text-4xl md:text-5xl font-black tracking-tight text-text-main leading-none">
+                                Tu programa de lealtad en <br />
+                                <span className="text-primary italic">tres simples pasos</span>
                             </h1>
-                            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-500 dark:text-gray-400">
-                                Sin hardware costoso ni integraciones complejas. Kpoint funciona directamente desde tu móvil o tablet, así de fácil.
+                            <p className="mx-auto max-w-2xl text-xl text-text-muted font-medium leading-relaxed">
+                                Sin hardware costoso ni integraciones complejas. Kpoint funciona directamente desde cualquier dispositivo, reinventando la conexión con tus clientes.
                             </p>
-                            {/* Premium Logo Presentation */}
-                            <div className="mt-8 flex justify-center">
-                                <div className="relative group">
-                                    {/* Soft Ambient Glow */}
-                                    <div className="absolute -inset-6 bg-primary/20 rounded-[3rem] blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-                                    {/* Glassmorphism Container */}
-                                    <div className="relative bg-white/40 dark:bg-white/5 backdrop-blur-md p-10 md:p-14 rounded-[3rem] border border-white/30 dark:border-white/10 shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                                        <img
-                                            src="/logo_kpoint.png"
-                                            alt="Kpoint Logo"
-                                            className="h-32 md:h-48 w-auto object-contain"
-                                        />
+                        </div>
+                    </div>
+                </section>
 
-                                        {/* Decorative Badge */}
-                                        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-primary text-[#102216] px-5 py-1.5 rounded-full text-[11px] font-black tracking-[0.25em] uppercase shadow-lg border-2 border-white dark:border-slate-900">
-                                            SOLUCIÓN PROBADA
+                {/* Steps Section */}
+                <section className="relative py-32 bg-white border-y border-orange-50">
+                    <div className="px-6 mx-auto max-w-7xl">
+                        <div className="grid grid-cols-1 gap-y-24 lg:grid-cols-3 lg:gap-x-16">
+                            {[
+                                {
+                                    step: '1',
+                                    title: 'Crea tu campaña',
+                                    desc: 'Configura tus recompensas en segundos. Tú decides el valor de cada punto y qué premios emocionarán a tus clientes.',
+                                    extra: '10 puntos = Café gratis',
+                                    rotation: '-rotate-6'
+                                },
+                                {
+                                    step: '2',
+                                    title: 'Escanea y suma',
+                                    desc: 'En el checkout, escanea el QR único del cliente o ingresa su número. Los puntos se acreditan en tiempo real.',
+                                    extra: 'Proceso de 3 segundos',
+                                    rotation: 'rotate-3',
+                                    icon: 'qr_code_scanner'
+                                },
+                                {
+                                    step: '3',
+                                    title: 'Fidelización Activa',
+                                    desc: 'El sistema automatiza el seguimiento, enviando notificaciones sobre nuevos premios y motivándolos a volver.',
+                                    extra: '+500 clientes activos',
+                                    rotation: '-rotate-3',
+                                    users: true
+                                }
+                            ].map((item, i) => (
+                                <div key={i} className={`reveal-scale group relative p-10 rounded-[3rem] transition-all duration-700 bg-slate-50 shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:bg-white hover:shadow-[0_45px_90px_-20px_rgba(0,0,0,0.2)] border border-transparent hover:border-orange-100`}>
+                                    <div className="absolute -top-12 left-10">
+                                        <div className={`flex items-center justify-center size-24 rounded-3xl bg-primary text-white text-5xl font-black shadow-2xl shadow-primary/30 transform ${item.rotation} group-hover:rotate-0 group-hover:scale-110 transition-all duration-500`}>
+                                            {item.step}
                                         </div>
                                     </div>
+                                    <div className="mt-10 space-y-6">
+                                        <h3 className="text-3xl font-black text-text-main mb-6 tracking-tight">{item.title}</h3>
+                                        <p className="text-text-muted text-lg leading-relaxed font-medium">
+                                            {item.desc}
+                                        </p>
+                                        
+                                        {item.users ? (
+                                            <div className="flex items-center gap-4">
+                                                <div className="flex -space-x-4">
+                                                    {[1,2,3].map(n => (
+                                                        <div key={n} className="w-12 h-12 rounded-2xl border-4 border-white bg-orange-200 overflow-hidden shadow-sm"></div>
+                                                    ))}
+                                                    <div className="w-12 h-12 rounded-2xl border-4 border-white bg-text-main flex items-center justify-center text-xs font-black text-white">+50</div>
+                                                </div>
+                                                <span className="text-sm font-bold text-text-muted">{item.extra}</span>
+                                            </div>
+                                        ) : item.icon ? (
+                                            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-orange-100 text-orange-900 font-black text-sm">
+                                                <span className="material-symbols-outlined text-xl">{item.icon}</span>
+                                                <span>{item.extra}</span>
+                                            </div>
+                                        ) : (
+                                            <div className="p-5 bg-white rounded-2xl border-l-[6px] border-primary shadow-sm">
+                                                <p className="text-lg italic font-bold text-text-main">"{item.extra}"</p>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </section>
-                <section className="relative pt-10 pb-10 bg-white dark:bg-background-dark overflow-hidden">
-                    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                        <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-3 lg:gap-x-12">
-                            {/* Step 1 */}
-                            <div className="relative group p-8 rounded-3xl transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-                                <div className="absolute -top-10 left-8">
-                                    <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-primary text-[#102216] text-4xl font-black shadow-lg transform rotate-[-5deg] group-hover:rotate-0 transition-transform duration-300">
-                                        1
-                                    </div>
-                                </div>
-                                <div className="mt-4">
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Crea tu campaña</h3>
-                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
-                                        Configura tus recompensas en minutos. Tú decides cuántos puntos cuesta cada premio y qué mensaje enviar a tus clientes.
-                                    </p>
-                                    <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-2xl border-l-4 border-primary">
-                                        <p className="text-sm italic font-medium">"10 puntos = Café gratis"</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* Step 2 */}
-                            <div className="relative group p-8 rounded-3xl transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-                                <div className="absolute -top-10 left-8">
-                                    <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-primary text-[#102216] text-4xl font-black shadow-lg transform rotate-[5deg] group-hover:rotate-0 transition-transform duration-300">
-                                        2
-                                    </div>
-                                </div>
-                                <div className="mt-4">
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Escanea y suma</h3>
-                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
-                                        En el momento de la compra, tu staff escanea el QR del cliente o ingresa su número. Los puntos se suman al instante.
-                                    </p>
-                                    <div className="flex items-center gap-2 text-primary font-bold">
-                                        <span className="material-symbols-outlined">qr_code_scanner</span>
-                                        <span>Proceso de 3 segundos</span>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* Step 3 */}
-                            <div className="relative group p-8 rounded-3xl transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-800/50">
-                                <div className="absolute -top-10 left-8">
-                                    <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-primary text-[#102216] text-4xl font-black shadow-lg transform rotate-[-3deg] group-hover:rotate-0 transition-transform duration-300">
-                                        3
-                                    </div>
-                                </div>
-                                <div className="mt-4">
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Lealtad automatizada</h3>
-                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
-                                        El sistema envía notificaciones a sus clientes informando sobre nuevos premios y ofertas, motivándolo a volver más seguido.
-                                    </p>
-                                    <div className="flex -space-x-4">
-                                        <div className="w-10 h-10 rounded-full border-2 border-white bg-blue-500 overflow-hidden"></div>
-                                        <div className="w-10 h-10 rounded-full border-2 border-white bg-green-500 overflow-hidden"></div>
-                                        <div className="w-10 h-10 rounded-full border-2 border-white bg-purple-500 overflow-hidden"></div>
-                                        <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center text-xs font-bold">+500</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="relative pt-10 pb-20 bg-gray-50 dark:bg-black">
-                    <div className="px-4 mx-auto max-w-7xl">
-                        <div className="flex flex-col lg:flex-row items-center gap-16">
-                            <div className="w-full lg:w-1/2">
-                                <h2 className="text-3xl font-black mb-8 dark:text-white">Potencia tu marketing con datos reales</h2>
+
+                {/* Analytics Section */}
+                <section className="reveal relative py-32 bg-slate-50 overflow-hidden">
+                    <div className="px-6 mx-auto max-w-7xl">
+                        <div className="flex flex-col lg:flex-row items-center gap-24">
+                            <div className="w-full lg:w-1/2 space-y-12">
                                 <div className="space-y-6">
-                                    <div className="flex items-start gap-4">
-                                        <div className="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/40 flex items-center justify-center text-primary">
-                                            <span className="material-symbols-outlined text-sm">analytics</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold dark:text-white">Analítica inteligente</h4>
-                                            <p className="text-gray-500 text-sm">Mira cuántos clientes nuevos tienes vs. recurrentes.</p>
-                                        </div>
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-widest">
+                                        Data-Driven Marketing
                                     </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-500">
-                                            <span className="material-symbols-outlined text-sm">campaign</span>
+                                    <h2 className="text-4xl md:text-5xl font-black text-text-main leading-none tracking-tight">
+                                        Potencia tu negocio con <span className="text-blue-600 italic">datos reales</span>
+                                    </h2>
+                                </div>
+                                <div className="space-y-8">
+                                    {[
+                                        { icon: 'analytics', title: 'Analítica en tiempo real', desc: 'Identifica patrones de compra y segmenta a tus mejores clientes automáticamente.', color: 'text-blue-500', bg: 'bg-blue-50' },
+                                        { icon: 'campaign', title: 'Marketing de precisión', desc: 'Envía ofertas personalizadas que traen de vuelta a clientes inactivos en días lentos.', color: 'text-orange-500', bg: 'bg-orange-50' }
+                                    ].map((feat, i) => (
+                                        <div key={i} className="flex items-start gap-6 group">
+                                            <div className={`mt-1 flex-shrink-0 size-14 rounded-2xl ${feat.bg} flex items-center justify-center ${feat.color} shadow-sm group-hover:scale-110 transition-transform duration-500`}>
+                                                <span className="material-symbols-outlined text-3xl font-bold">{feat.icon}</span>
+                                            </div>
+                                            <div>
+                                                <h4 className="text-2xl font-black text-text-main mb-2 tracking-tight">{feat.title}</h4>
+                                                <p className="text-text-muted text-lg font-medium leading-relaxed">{feat.desc}</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h4 className="font-bold dark:text-white">Mensajes automáticos</h4>
-                                            <p className="text-gray-500 text-sm">Recupera clientes que no han vuelto en los últimos 30 días.</p>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
+
                             <div className="w-full lg:w-1/2">
-                                <div className="relative p-6 bg-white dark:bg-gray-900 rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-800">
-                                    <div className="absolute top-0 right-0 p-4">
-                                        <div className="h-2 w-20 rounded-full bg-gray-100 dark:bg-gray-800"></div>
-                                    </div>
-                                    <div className="pt-8 space-y-4">
-                                        <div className="h-12 w-3/4 rounded-xl bg-gray-50 dark:bg-gray-800"></div>
-                                        <div className="grid grid-cols-2 gap-4">
-                                            <div className="h-32 rounded-2xl bg-primary/10 border border-primary/20 p-4 flex flex-col justify-between">
-                                                <span className="text-xs font-bold text-primary uppercase">Mensual</span>
-                                                <span className="text-2xl font-black dark:text-white">+84%</span>
-                                                <span className="text-[10px] text-gray-400">Retención de clientes</span>
+                                <div className="relative p-10 bg-white dark:bg-gray-900 rounded-[4rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15)] overflow-hidden border border-slate-100 dark:border-gray-800 rotate-2 hover:rotate-0 transition-all duration-700">
+                                    <div className="space-y-8">
+                                        <div className="h-14 w-2/3 rounded-2xl bg-slate-50 dark:bg-gray-800 animate-pulse"></div>
+                                        <div className="grid grid-cols-2 gap-8">
+                                            <div className="h-44 rounded-[2.5rem] bg-orange-50 border border-orange-100 p-8 flex flex-col justify-between group hover:bg-primary transition-colors duration-500">
+                                                <span className="text-xs font-black text-orange-900 uppercase tracking-widest group-hover:text-white">Retención</span>
+                                                <span className="text-5xl font-black text-text-main group-hover:text-white">+84%</span>
+                                                <div className="h-1.5 w-full bg-orange-200 rounded-full group-hover:bg-white/30 overflow-hidden">
+                                                    <div className="h-full bg-primary group-hover:bg-white w-[84%]"></div>
+                                                </div>
                                             </div>
-                                            <div className="h-32 rounded-2xl bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/20 p-4 flex flex-col justify-between">
-                                                <span className="text-xs font-bold text-blue-500 uppercase">Actividad</span>
-                                                <span className="text-2xl font-black dark:text-white">1.2k</span>
-                                                <span className="text-[10px] text-gray-400">Canjes realizados</span>
+                                            <div className="h-44 rounded-[2.5rem] bg-blue-50 border border-blue-100 p-8 flex flex-col justify-between group hover:bg-blue-600 transition-colors duration-500">
+                                                <span className="text-xs font-black text-blue-900 uppercase tracking-widest group-hover:text-white">Actividad</span>
+                                                <span className="text-5xl font-black text-text-main group-hover:text-white">1.2k</span>
+                                                <span className="text-sm font-bold text-blue-400 group-hover:text-blue-100 font-medium">Canjes este mes</span>
                                             </div>
                                         </div>
-                                        <div className="h-24 rounded-2xl bg-gray-50 dark:bg-gray-800"></div>
+                                        <div className="h-32 rounded-[2.5rem] bg-slate-50 dark:bg-gray-800 relative overflow-hidden">
+                                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <div className="py-10 text-center">
-                    <a href="https://fidelity-app-mvp.vercel.app/" className="inline-flex items-center gap-3 bg-gray-900 dark:bg-primary text-white dark:text-[#102216] px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-xl">
-                        Empezar ahora gratis
-                        <span className="material-symbols-outlined">rocket_launch</span>
-                    </a>
-                </div>
+
+                {/* Final CTA */}
+                <section className="reveal py-24 px-6 text-center">
+                    <div className="max-w-4xl mx-auto space-y-12">
+                        <h2 className="text-4xl md:text-5xl font-black text-text-main tracking-tight leading-none">Listo para ver la magia?</h2>
+                        <a href="https://fidelity-app-mvp.vercel.app/" className="interactive-button group inline-flex items-center gap-4 bg-text-main text-white px-14 py-6 rounded-3xl font-black text-2xl hover:bg-black transition-all shadow-[0_30px_60px_-10px_rgba(0,0,0,0.3)] hover:-translate-y-2">
+                            <span>Empezar Ahora</span>
+                            <span className="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform text-3xl font-bold">rocket_launch</span>
+                        </a>
+                        <p className="text-text-muted font-bold text-lg">Prueba gratuita de 14 días. Sin tarjeta de crédito.</p>
+                    </div>
+                </section>
             </main>
         </div>
     );

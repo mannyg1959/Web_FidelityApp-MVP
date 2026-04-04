@@ -1,120 +1,118 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useReveal } from '../hooks/useReveal';
 
 const ProblemSolutionScreen = () => {
+    useReveal();
+
     return (
-        <div className="antialiased">
-            <main className="flex flex-col">
-                <section className="py-10 px-4 text-center bg-white dark:bg-background-dark">
-                    <div className="max-w-3xl mx-auto">
-                        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 dark:text-white mb-6">
-                            Fidelizar clientes no debería ser difícil
+        <div className="antialiased bg-background-light">
+            <main className="flex flex-col overflow-x-hidden">
+                <section className="reveal py-20 px-6 text-center bg-white">
+                    <div className="max-w-4xl mx-auto space-y-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-600 text-xs font-bold uppercase tracking-widest mb-4">
+                            La Realidad del Mercado
+                        </div>
+                        <h1 className="text-4xl md:text-5xl font-black tracking-tight text-text-main leading-none">
+                            Fidelizar <span className="text-primary italic">no debería</span> ser difícil
                         </h1>
-                        <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                            Olvídate de las tarjetas de papel y las apps que nadie descarga. Descubre por qué Kpoint es la evolución de la lealtad.
+                        <p className="text-xl text-text-muted leading-relaxed font-medium max-w-2xl mx-auto">
+                            Olvídate de las tarjetas de papel y las apps que nadie descarga. Descubre por qué Kpoint es la evolución de la lealtad digital.
                         </p>
                     </div>
                 </section>
-                <section className="flex flex-col lg:flex-row min-h-[800px] w-full">
-                    <div className="relative w-full lg:w-1/2 bg-[#f3f4f6] dark:bg-surface-dark px-8 py-10 md:px-16 lg:py-16 flex flex-col justify-center border-r border-gray-200/50 dark:border-gray-700">
-                        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(#000 1px, transparent 1px)", backgroundSize: "24px 24px" }}></div>
-                        <div className="relative z-10 max-w-lg mx-auto lg:mr-10">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold mb-6">
+
+                <section className="relative py-24 bg-white dark:bg-background-dark border-y border-orange-50 overflow-hidden">
+                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(#000 1px, transparent 1px)", backgroundSize: "32px 32px" }}></div>
+                    <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-stretch relative z-10">
+                        {/* Card: Problem */}
+                        <div className="reveal-left active flex flex-col bg-slate-50 dark:bg-surface-dark/50 rounded-[3rem] p-8 md:p-16 border border-red-100 dark:border-gray-700 shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative overflow-hidden group hover:shadow-[0_30px_70px_rgba(239,68,68,0.1)] transition-all duration-700">
+                            <div className="absolute top-0 left-0 w-32 h-32 bg-red-100/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                            <div className="relative z-10">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-100 text-red-700 text-xs font-black mb-8 border border-red-200">
                                 <span className="material-symbols-outlined text-sm">warning</span>
-                                SITUACIÓN ACTUAL
+                                EL STATUS QUO
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight">El Problema</h2>
-                            <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">Los sistemas tradicionales generan fricción y alejan a tus clientes.</p>
-                            <div className="space-y-8">
-                                <div className="group flex gap-5">
-                                    <div className="flex-shrink-0 size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform duration-300">
-                                        <span className="material-symbols-outlined text-2xl">person_remove</span>
+                            <h2 className="text-4xl md:text-5xl font-black text-text-main dark:text-white mb-6 tracking-tight">El Problema</h2>
+                            <p className="text-text-muted dark:text-gray-400 text-xl font-medium mb-12">Los sistemas tradicionales generan fricción y alejan a tus clientes potenciales.</p>
+                            
+                            <div className="space-y-12">
+                                {[
+                                    { icon: 'person_remove', title: 'Los clientes no vuelven', desc: 'Sin incentivos claros ni recordatorios, el 70% de los clientes elige a la competencia por precio o conveniencia.' },
+                                    { icon: 'phonelink_erase', title: 'Apps complicadas', desc: 'Nadie quiere descargar otra aplicación que ocupa espacio, pide mil permisos y es difícil de entender.' },
+                                    { icon: 'money_off', title: 'Ventas perdidas', desc: 'Sin datos de contacto, pierdes la oportunidad de comunicar ofertas y traerlos de vuelta en días lentos.' }
+                                ].map((item, i) => (
+                                    <div key={i} className="group flex gap-6">
+                                        <div className="flex-shrink-0 size-14 rounded-2xl bg-white dark:bg-gray-800 border border-red-100 dark:border-gray-700 shadow-sm flex items-center justify-center text-red-500 group-hover:scale-110 transition-all duration-500 group-hover:bg-red-50 group-hover:rotate-3">
+                                            <span className="material-symbols-outlined text-3xl">{item.icon}</span>
+                                        </div>
+                                        <div>
+                                            <h3 className="text-2xl font-black text-text-main dark:text-white mb-3 tracking-tight">{item.title}</h3>
+                                            <p className="text-text-muted dark:text-gray-400 leading-relaxed font-medium">{item.desc}</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Los clientes no vuelven</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Sin incentivos claros ni recordatorios, el 70% de los clientes elige a la competencia por precio o conveniencia.</p>
-                                    </div>
-                                </div>
-                                <div className="group flex gap-5">
-                                    <div className="flex-shrink-0 size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform duration-300">
-                                        <span className="material-symbols-outlined text-2xl">phonelink_erase</span>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Apps complicadas</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Nadie quiere descargar otra aplicación que ocupa espacio en tu dispositivo, pide mil permisos y es difícil de usar.</p>
-                                    </div>
-                                </div>
-                                <div className="group flex gap-5">
-                                    <div className="flex-shrink-0 size-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform duration-300">
-                                        <span className="material-symbols-outlined text-2xl">money_off</span>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Ventas perdidas</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Sin datos de contacto, pierdes la oportunidad de comunicar ofertas y traerlos de vuelta en días lentos.</p>
-                                    </div>
-                                </div>
+                                ))}
+                            </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="relative w-full lg:w-1/2 bg-white dark:bg-background-dark px-8 py-10 md:px-16 lg:py-16 flex flex-col justify-center shadow-[-20px_0_40px_-10px_rgba(0,0,0,0.05)] z-10">
-                        <div className="max-w-lg mx-auto lg:ml-10">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold mb-6">
+
+                        {/* Card: Solution */}
+                        <div className="reveal-right active flex flex-col bg-white dark:bg-background-dark rounded-[3rem] p-8 md:p-16 border border-orange-100 dark:border-gray-700 shadow-[0_20px_50px_rgba(255,112,67,0.15)] relative overflow-hidden group hover:shadow-[0_30px_70px_rgba(255,112,67,0.2)] transition-all duration-700">
+                            <div className="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full blur-[80px]"></div>
+                            <div className="relative z-10">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 text-orange-900 text-xs font-black mb-8 border border-orange-200">
                                 <span className="material-symbols-outlined text-sm">auto_awesome</span>
-                                CON KPOINT
+                                LA EVOLUCIÓN
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight">La Solución <span className="text-primary inline-block relative">Kpoint</span></h2>
-                            <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">Una plataforma simple que elimina barreras y fideliza al instante.</p>
-                            <div className="space-y-8">
-                                <div className="group flex gap-5 p-4 rounded-2xl hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-colors duration-300 -ml-4">
-                                    <div className="flex-shrink-0 size-12 rounded-xl bg-primary text-[#102216] flex items-center justify-center shadow-lg shadow-green-200 group-hover:rotate-6 transition-transform duration-300">
-                                        <span className="material-symbols-outlined text-2xl font-bold">check_circle</span>
+                            <h2 className="text-4xl md:text-5xl font-black text-text-main dark:text-white mb-6 tracking-tight">La Solución <span className="bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent italic">Kpoint</span></h2>
+                            <p className="text-text-muted dark:text-gray-400 text-xl font-medium mb-12">Una plataforma simple que elimina barreras y fideliza al instante.</p>
+                            
+                            <div className="space-y-10">
+                                {[
+                                    { icon: 'check_circle', title: 'Recompensas sin fricción', desc: 'Acumula puntos y canjea premios con solo un código QR o número de teléfono. Tan rápido como un respiro.' },
+                                    { icon: 'no_sim', title: 'Sin descargas', desc: 'Todo funciona desde el navegador web o PWA. Cero fricción para que tus clientes participen hoy mismo.' },
+                                    { icon: 'sentiment_very_satisfied', title: 'Fácil para todos', desc: 'Interfaz ultra-intuitiva diseñada para que cualquier persona la use al instante, sin tutoriales.' }
+                                ].map((item, i) => (
+                                    <div key={i} className="group flex gap-6 p-6 rounded-[2rem] hover:bg-orange-50/50 dark:hover:bg-orange-900/10 transition-all duration-500 -ml-6 border border-transparent hover:border-orange-100">
+                                        <div className="flex-shrink-0 size-14 rounded-2xl bg-primary text-white flex items-center justify-center shadow-xl shadow-primary/20 group-hover:rotate-12 transition-transform duration-500 group-hover:scale-110">
+                                            <span className="material-symbols-outlined text-3xl font-bold">{item.icon}</span>
+                                        </div>
+                                        <div>
+                                            <h3 className="text-2xl font-black text-text-main dark:text-white mb-3 tracking-tight">{item.title}</h3>
+                                            <p className="text-text-muted dark:text-gray-400 leading-relaxed font-medium">{item.desc}</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Recompensas sin fricción</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Acumula puntos y canjea premios con solo un número de teléfono. Tan rápido como un pago con tarjeta.</p>
-                                    </div>
-                                </div>
-                                <div className="group flex gap-5 p-4 rounded-2xl hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-colors duration-300 -ml-4">
-                                    <div className="flex-shrink-0 size-12 rounded-xl bg-primary text-[#102216] flex items-center justify-center shadow-lg shadow-green-200 group-hover:rotate-6 transition-transform duration-300">
-                                        <span className="material-symbols-outlined text-2xl font-bold">no_sim</span>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Sin descargas obligatorias</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Todo funciona desde tu dispositivo móvil o el navegador web. Cero fricción para que tus clientes participen.</p>
-                                    </div>
-                                </div>
-                                <div className="group flex gap-5 p-4 rounded-2xl hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-colors duration-300 -ml-4">
-                                    <div className="flex-shrink-0 size-12 rounded-xl bg-primary text-[#102216] flex items-center justify-center shadow-lg shadow-green-200 group-hover:rotate-6 transition-transform duration-300">
-                                        <span className="material-symbols-outlined text-2xl font-bold">sentiment_very_satisfied</span>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Fácil para todos</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">Interfaz intuitiva diseñada para que cualquier persona, desde jóvenes hasta mayores, la use al instante.</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
-                            <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-700">
-                                <a href="https://fidelity-app-mvp.vercel.app/" className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl h-14 px-8 bg-gray-900 dark:bg-white dark:text-gray-900 text-white text-base font-bold hover:bg-gray-800 dark:hover:bg-gray-100 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
-                                    Crear cuenta gratis
-                                    <span className="material-symbols-outlined text-primary dark:text-primary-dark">arrow_forward</span>
+
+                            <div className="mt-16 pt-10 border-t border-slate-100 dark:border-gray-700">
+                                <a href="https://fidelity-app-mvp.vercel.app/" className="interactive-button group w-full sm:w-auto flex items-center justify-center gap-3 rounded-2xl h-16 px-10 bg-text-main text-white text-lg font-black hover:bg-black shadow-2xl transition-all">
+                                    <span>Comenzar Ahora</span>
+                                    <span className="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-                </section>
-                <section className="bg-gray-50 dark:bg-black py-12 px-4">
-                    <div className="max-w-4xl mx-auto bg-[#102216] rounded-[2rem] p-8 md:p-16 text-center relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-                        <div className="absolute bottom-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+                </div>
+            </section>
+
+                <section className="reveal py-12 px-6 relative overflow-hidden">
+                    <div className="max-w-2xl mx-auto bg-blue-600 rounded-[1.5rem] p-8 md:p-10 text-center relative overflow-hidden shadow-xl shadow-blue-900/20">
+                        <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+                        <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-400/10 rounded-full blur-[80px] translate-x-1/2 translate-y-1/2"></div>
+                        
                         <div className="relative z-10 flex flex-col items-center">
-                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Empieza a fidelizar hoy mismo</h2>
-                            <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-10">
-                                Únete a cientos de negocios que ya están aumentando sus ventas recurrentes con Kpoint.
+                            <h2 className="text-4xl md:text-5xl font-black text-white mb-4 leading-none">No dejes que se escapen</h2>
+                            <p className="text-blue-100 text-base md:text-lg max-w-md mb-6 font-medium">
+                                Los clientes que amarán tu negocio están ahí fuera. Dales una razón poderosa para volver con Kpoint.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                                <a href="https://fidelity-app-mvp.vercel.app/" className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-primary text-[#102216] text-base font-bold hover:bg-[#25d360] transition-colors shadow-[0_0_20px_rgba(43,238,108,0.3)]">
-                                    Comenzar ahora
-                                </a>
+                            <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
+                                <button className="interactive-button flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-white text-blue-600 text-base font-black transition-all shadow-lg shadow-black/10">
+                                    Pruébalo Gratis
+                                </button>
+                                <button className="interactive-button flex min-w-[160px] items-center justify-center rounded-xl h-12 px-6 bg-blue-500/30 text-white text-base font-black backdrop-blur-md border border-white/20 transition-all hover:bg-blue-500/40">
+                                    Hablar con un Experto
+                                </button>
                             </div>
                         </div>
                     </div>
