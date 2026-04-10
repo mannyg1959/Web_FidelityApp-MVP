@@ -75,10 +75,7 @@ const HomeScreen = () => {
                                 <h3 className="mb-1 text-xl font-bold text-text-main">Fácil de usar</h3>
                                 <p className="text-base text-text-muted leading-snug font-medium">Interfaz intuitiva diseñada para que tus clientes amen volver sin frustraciones tecnológicas.</p>
                             </div>
-                            <div className="mt-auto flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
-                                <span>Ver detalles</span>
-                                <span className="material-symbols-outlined text-xs">arrow_forward</span>
-                            </div>
+
                         </div>
 
                         <div className="reveal-scale group flex flex-col gap-4 rounded-[2rem] bg-white p-6 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-orange-50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-100/50 hover:-translate-y-4 md:translate-y-2 h-fit">
@@ -89,10 +86,7 @@ const HomeScreen = () => {
                                 <h3 className="mb-1 text-xl font-bold text-text-main">Personalizable</h3>
                                 <p className="text-base text-text-muted leading-snug font-medium">Adapta colores, recompensas y <span className="text-primary font-bold underline decoration-primary/30">tu logo</span> para una identidad única.</p>
                             </div>
-                            <div className="mt-auto flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
-                                <span>Ver detalles</span>
-                                <span className="material-symbols-outlined text-xs">arrow_forward</span>
-                            </div>
+
                         </div>
 
                         <div className="reveal-scale group flex flex-col gap-4 rounded-[2rem] bg-white p-6 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-orange-50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-100/50 hover:-translate-y-4 h-fit">
@@ -103,10 +97,7 @@ const HomeScreen = () => {
                                 <h3 className="mb-1 text-xl font-bold text-text-main">Data Real</h3>
                                 <p className="text-base text-text-muted leading-snug font-medium">Conoce a tus mejores clientes y optimiza tus campañas con análisis detallados en vivo.</p>
                             </div>
-                            <div className="mt-auto flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
-                                <span>Ver detalles</span>
-                                <span className="material-symbols-outlined text-xs">arrow_forward</span>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -122,9 +113,9 @@ const HomeScreen = () => {
                         <h2 className="text-4xl font-black text-white sm:text-5xl max-w-md leading-none">¿Listo para transformar tu negocio?</h2>
                         <p className="text-blue-100 text-lg leading-snug max-w-sm">Únete a cientos de comercios que ya están digitalizando su lealtad.</p>
                         <div className="flex flex-col sm:flex-row gap-3 mt-1">
-                            <button className="interactive-button h-12 px-8 bg-white text-blue-600 font-black rounded-xl text-base transition-transform hover:scale-105 shadow-lg shadow-black/10">
+                            <a href="https://app.kpointve.com" className="interactive-button flex items-center justify-center h-12 px-8 bg-white text-blue-600 font-black rounded-xl text-base transition-transform hover:scale-105 shadow-lg shadow-black/10">
                                 Comenzar Gratis
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

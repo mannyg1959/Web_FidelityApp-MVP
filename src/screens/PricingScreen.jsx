@@ -69,9 +69,9 @@ const PlanCard = () => {
                 ))}
             </div>
 
-            <button className="interactive-button relative w-full py-4 rounded-2xl bg-primary text-white font-black text-xl hover:brightness-110 transition-all shadow-xl shadow-primary/20">
+            <a href="https://app.kpointve.com" className="interactive-button relative w-full py-4 flex items-center justify-center rounded-2xl bg-primary text-white font-black text-xl hover:brightness-110 transition-all shadow-xl shadow-primary/20">
                 Empezar 60 días gratis
-            </button>
+            </a>
         </div>
     );
 };
@@ -185,10 +185,10 @@ const PricingScreen = () => {
                                     establezca relaciones más sólidas.
                                 </p>
                                 
-                                <button className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
+                                <a href="https://app.kpointve.com" className="interactive-button group/btn relative inline-flex items-center justify-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
                                     <span>Comenzar</span>
                                     <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1 text-2xl">rocket_launch</span>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

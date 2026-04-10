@@ -89,7 +89,7 @@ const BenefitsScreen = () => {
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                             {[
                                 { icon: 'restaurant', label: 'Restaurantes', color: 'text-orange-500', bg: 'bg-orange-50' },
-                                { icon: 'shopping_bag', label: 'Retail', color: 'text-primary', bg: 'bg-orange-50' },
+                                { icon: 'shopping_bag', label: 'Servicios', color: 'text-primary', bg: 'bg-orange-50' },
                                 { icon: 'content_cut', label: 'Estética', color: 'text-blue-500', bg: 'bg-blue-50' },
                                 { icon: 'storefront', label: 'Kioscos', color: 'text-purple-500', bg: 'bg-purple-50' }
                             ].map((item, i) => (
@@ -183,12 +183,12 @@ const BenefitsScreen = () => {
                                 <span className="text-blue-100 italic">negocio crecer?</span>
                             </h2>
                             
-                            <button className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
+                            <a href="https://app.kpointve.com" className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
                                 <span>Empieza Ahora</span>
                                 <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
                                 {/* Subtle inner glow */}
                                 <div className="absolute inset-0 rounded-2xl bg-blue-400/0 group-hover/btn:bg-blue-400/5 transition-colors"></div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </section>

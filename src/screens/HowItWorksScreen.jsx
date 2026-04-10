@@ -1,8 +1,34 @@
 import React from 'react';
 import { useReveal } from '../hooks/useReveal';
+import InfiniteCarousel from '../components/InfiniteCarousel';
 
 const HowItWorksScreen = () => {
     useReveal();
+
+    const marketingImages = [
+        'Gastronomia/Diapositiva15.PNG',
+        'Gastronomia/Diapositiva16.PNG',
+        'Gastronomia/Diapositiva17.PNG',
+        'Gastronomia/Diapositiva8.PNG',
+        'General/Diapositiva1.PNG',
+        'General/Diapositiva2.PNG',
+        'General/Diapositiva6.PNG',
+        'Salud-Belleza/Diapositiva10.PNG',
+        'Salud-Belleza/Diapositiva11.PNG',
+        'Salud-Belleza/Diapositiva12.PNG',
+        'Salud-Belleza/Diapositiva13.PNG',
+        'Salud-Belleza/Diapositiva14.PNG',
+        'Servicios-Varios/Diapositiva12.PNG',
+        'Servicios-Varios/Diapositiva18.PNG',
+        'Servicios-Varios/Diapositiva19.PNG',
+        'Servicios-Varios/Diapositiva3.PNG',
+        'Servicios-Varios/Diapositiva4.PNG',
+        'Tiendas/Diapositiva20.PNG',
+        'Tiendas/Diapositiva21.PNG',
+        'Tiendas/Diapositiva5.PNG',
+        'Tiendas/Diapositiva7.PNG',
+        'Tiendas/Diapositiva9.PNG'
+    ];
 
     return (
         <div className="antialiased bg-background-light">
@@ -157,13 +183,22 @@ const HowItWorksScreen = () => {
                 {/* Final CTA */}
                 <section className="reveal py-8 px-6 text-center">
                     <div className="max-w-4xl mx-auto space-y-12">
-                        <h2 className="text-4xl md:text-5xl font-black text-text-main tracking-tight leading-none">Listo para ver la magia?</h2>
-                        <a href="https://fidelity-app-mvp.vercel.app/" className="interactive-button group inline-flex items-center gap-4 bg-text-main text-white px-14 py-6 rounded-3xl font-black text-2xl hover:bg-black transition-all shadow-[0_30px_60px_-10px_rgba(0,0,0,0.3)] hover:-translate-y-2">
+                        <h2 className="text-4xl md:text-5xl font-black text-text-main tracking-tight leading-none">¿Listo para ver crecer tu negocio?</h2>
+                        <a href="https://app.kpointve.com" className="interactive-button group inline-flex items-center gap-4 bg-text-main text-white px-14 py-6 rounded-3xl font-black text-2xl hover:bg-black transition-all shadow-[0_30px_60px_-10px_rgba(0,0,0,0.3)] hover:-translate-y-2">
                             <span>Empezar Ahora</span>
                             <span className="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform text-3xl font-bold">rocket_launch</span>
                         </a>
                         <p className="text-text-muted font-bold text-lg leading-snug">Prueba gratuita de 60 días. Sin tarjeta de crédito.</p>
                     </div>
+                </section>
+
+                {/* Supabase Assets Carousel */}
+                <section className="reveal">
+                    <InfiniteCarousel 
+                        bucketName="marketing_assets" 
+                        projectRef="gtxzmkmwjclwppnkiifi" 
+                        images={marketingImages} 
+                    />
                 </section>
             </main>
         </div>

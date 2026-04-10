@@ -85,12 +85,7 @@ const ProblemSolutionScreen = () => {
                                 ))}
                             </div>
 
-                            <div className="mt-8 pt-6 border-t border-slate-100 dark:border-gray-700">
-                                <a href="https://fidelity-app-mvp.vercel.app/" className="interactive-button group w-full sm:w-auto flex items-center justify-center gap-3 rounded-xl h-14 px-8 bg-text-main text-white text-base font-black hover:bg-black shadow-2xl transition-all">
-                                    <span>Comenzar Ahora</span>
-                                    <span className="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -107,12 +102,9 @@ const ProblemSolutionScreen = () => {
                                 Los clientes que amarán tu negocio están ahí fuera. Dales una razón poderosa para volver con Kpoint.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
-                                <button className="interactive-button flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-white text-blue-600 text-base font-black transition-all shadow-lg shadow-black/10">
+                                <a href="https://app.kpointve.com" className="interactive-button flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-white text-blue-600 text-base font-black transition-all shadow-lg shadow-black/10">
                                     Pruébalo Gratis
-                                </button>
-                                <button className="interactive-button flex min-w-[160px] items-center justify-center rounded-xl h-12 px-6 bg-blue-500/30 text-white text-base font-black backdrop-blur-md border border-white/20 transition-all hover:bg-blue-500/40">
-                                    Hablar con un Experto
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

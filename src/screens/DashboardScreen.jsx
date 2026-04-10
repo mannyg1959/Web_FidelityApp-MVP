@@ -193,7 +193,7 @@ const DashboardScreen = () => {
                                 basado en evidencias reales.
                             </p>
                             
-                            <a href="https://fidelity-app-mvp.vercel.app/" className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
+                            <a href="https://app.kpointve.com" className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
                                 <span>Pruebalo Gratis</span>
                                 <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1 text-2xl">rocket_launch</span>
                             </a>
