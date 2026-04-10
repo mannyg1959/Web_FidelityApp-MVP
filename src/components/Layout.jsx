@@ -38,15 +38,7 @@ export const Navbar = () => {
                 />
             </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden items-center gap-8 md:flex">
-                <a href="/#inicio" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Inicio</a>
-                <a href="/#solucion" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Solución</a>
-                <a href="/#como-funciona" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Cómo funciona</a>
-                <a href="/#beneficios" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Beneficios</a>
-                <a href="/#dashboard" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Dashboard</a>
-                <a href="/#precios" className="relative px-3 py-2 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-300 hover:bg-orange-50 dark:hover:bg-orange-950/30 hover:text-primary hover:scale-105">Precios</a>
-            </nav>
+            {/* Navigation Menus have been removed to convert the app into a pure Landing Page */}
 
             <div className="flex items-center gap-3">
                 <button className="hidden cursor-pointer rounded-lg px-4 py-2 text-sm font-bold text-slate-600 dark:text-slate-400 transition-colors hover:text-primary md:block">
@@ -71,14 +63,7 @@ export const Navbar = () => {
             {/* Mobile Navigation Overlay */}
             {isMenuOpen && (
                 <div className="fixed inset-x-0 top-[73px] z-[90] flex h-[calc(100vh-73px)] flex-col bg-white dark:bg-slate-900 p-6 md:hidden">
-                    <nav className="flex flex-col gap-6 text-lg">
-                        <a href="/#inicio" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Inicio</a>
-                        <a href="/#solucion" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Solución</a>
-                        <a href="/#como-funciona" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Cómo funciona</a>
-                        <a href="/#beneficios" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Beneficios</a>
-                        <a href="/#dashboard" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Dashboard</a>
-                        <a href="/#precios" onClick={() => setIsMenuOpen(false)} className="font-bold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors">Precios</a>
-                    </nav>
+                    {/* Mobile Navigation hidden */}
                     <div className="mt-auto flex flex-col gap-4">
                         <button className="w-full rounded-2xl bg-slate-100 dark:bg-slate-800 py-4 font-black text-slate-700 dark:text-white">
                             Iniciar sesión
@@ -158,7 +143,6 @@ export const MainLayout = () => {
 
     return (
         <div className="flex min-h-screen flex-col">
-            <Navbar />
             <main className="flex-1">
                 <Outlet />
             </main>

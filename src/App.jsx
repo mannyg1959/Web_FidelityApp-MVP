@@ -14,11 +14,6 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/problem-solution" element={<ProblemSolutionScreen />} />
-          <Route path="/how-it-works" element={<HowItWorksScreen />} />
-          <Route path="/benefits" element={<BenefitsScreen />} />
-          <Route path="/dashboard" element={<DashboardScreen />} />
-          <Route path="/pricing" element={<PricingScreen />} />
         </Route>
       </Routes>
     </Router>

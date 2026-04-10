@@ -7,6 +7,7 @@
     @apply bg-background-light text-text-main font-sans;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 }
 
@@ -73,12 +74,12 @@
   }
 
   .card-3d {
-    transform: perspective(1000px) rotateY(-12deg) rotateX(4deg);
-    transition: transform 0.5s ease-out;
+    transform: perspective(1000px) rotateY(-25deg) rotateX(8deg);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .card-3d:hover {
-    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+    transform: perspective(1000px) rotateY(-15deg) rotateX(4deg) scale(1.02);
   }
 
   /* Material Symbols Configuration */
@@ -108,13 +109,13 @@
 }
 
 .animate-floating {
-  animation: floating 3s ease-in-out infinite;
+  animation: floating 2s ease-in-out infinite;
 }
 
 .animate-floating-slow {
-  animation: floating 5s ease-in-out infinite;
+  animation: floating 3s ease-in-out infinite;
 }
 
 .animate-floating-delayed {
-  animation: floating 4s ease-in-out 1s infinite;
+  animation: floating 2.5s ease-in-out 0.5s infinite;
 }

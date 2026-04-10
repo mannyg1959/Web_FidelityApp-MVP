@@ -5,9 +5,9 @@ const DashboardScreen = () => {
     useReveal();
 
     return (
-        <div className="antialiased bg-background-light overflow-x-hidden">
+        <div className="antialiased bg-background-light">
             <main className="flex-grow">
-                <section className="reveal relative pt-20 pb-16 px-6">
+                <section className="reveal relative pt-6 pb-6 px-6">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] max-w-7xl">
                         <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[60%] bg-primary/10 blur-[150px] rounded-full"></div>
                         <div className="absolute bottom-0 left-[-5%] w-[60%] h-[60%] bg-blue-400/5 blur-[150px] rounded-full"></div>
@@ -47,22 +47,22 @@ const DashboardScreen = () => {
                                         </div>
 
                                         {/* Main Dashboard Content Mockup */}
-                                        <div className="flex-1 p-10 space-y-10 overflow-hidden">
+                                        <div className="flex-1 p-4 md:p-10 space-y-8 md:space-y-10 overflow-hidden">
                                             <div className="flex justify-between items-center">
                                                 <div className="h-8 w-48 bg-slate-100 dark:bg-slate-800 rounded-2xl animate-pulse"></div>
                                                 <div className="size-12 rounded-[1.2rem] bg-slate-50 dark:bg-slate-800 border border-slate-100"></div>
                                             </div>
 
-                                            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                                                 {[
                                                     { label: 'Retención', val: '+84%', color: 'text-text-main', bg: 'bg-orange-50/50', border: 'border-orange-100', progress: 'w-[84%]' },
                                                     { label: 'Actividad', val: '1.2k', color: 'text-primary', bg: 'bg-blue-50/50', border: 'border-blue-100', progress: 'w-[65%]' },
                                                     { label: 'Impacto', val: '+24%', color: 'text-green-500', bg: 'bg-green-50/50', border: 'border-green-100', progress: 'w-[40%]' }
                                                 ].map((stat, i) => (
-                                                    <div key={i} className={`p-8 rounded-[2.5rem] ${stat.bg} border ${stat.border} shadow-sm group/stat transition-all hover:shadow-xl hover:scale-105 hover:bg-white duration-500 relative overflow-hidden`}>
+                                                    <div key={i} className={`p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] ${stat.bg} border ${stat.border} shadow-sm group/stat transition-all hover:shadow-xl hover:scale-105 hover:bg-white duration-500 relative overflow-hidden`}>
                                                         <div className="relative z-10">
-                                                            <p className="text-[10px] text-text-muted font-black uppercase tracking-[0.2em] mb-4">{stat.label}</p>
-                                                            <p className={`text-4xl font-black ${stat.color} leading-none tracking-tighter mb-4`}>{stat.val}</p>
+                                                            <p className="text-[10px] text-text-muted font-black uppercase tracking-[0.2em] mb-3">{stat.label}</p>
+                                                            <p className={`text-3xl md:text-4xl font-black ${stat.color} leading-none tracking-tighter mb-4`}>{stat.val}</p>
                                                             <div className="h-1.5 w-full bg-slate-200/50 rounded-full overflow-hidden">
                                                                 <div className={`h-full bg-primary ${stat.color.replace('text-', 'bg-')}`} style={{ width: stat.progress.match(/\d+/)[0] + '%' }}></div>
                                                             </div>
@@ -80,7 +80,7 @@ const DashboardScreen = () => {
                                                         <div className="size-2 rounded-full bg-primary/20 animate-pulse delay-150"></div>
                                                     </div>
                                                 </div>
-                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center bg-slate-50 dark:bg-slate-800/50 rounded-[2.5rem] p-8 border border-slate-100 dark:border-slate-700">
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center bg-slate-100/50 dark:bg-slate-800/50 rounded-[2.5rem] p-6 md:p-8 border border-slate-100 dark:border-slate-700">
                                                     {/* Radial Chart */}
                                                     <div className="relative size-40 md:size-48 mx-auto flex items-center justify-center group">
                                                         <svg className="size-full -rotate-90" viewBox="0 0 100 100">
@@ -171,7 +171,7 @@ const DashboardScreen = () => {
                 </section>
 
                 {/* Bottom CTA */}
-                <section className="reveal py-12 px-6">
+                <section className="reveal py-4 px-6">
                     <div className="max-w-2xl mx-auto bg-blue-600 rounded-[1.5rem] p-8 md:p-10 text-center text-white overflow-hidden relative shadow-lg shadow-blue-900/20">
                         <div className="absolute top-0 left-0 p-8 opacity-10 pointer-events-none rotate-12">
                             <span className="material-symbols-outlined text-[120px] font-bold">hub</span>

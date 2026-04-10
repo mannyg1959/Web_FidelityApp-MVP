@@ -8,7 +8,7 @@ import PricingScreen from './PricingScreen';
 
 const LandingPage = () => {
     return (
-        <div className="flex flex-col overflow-x-hidden bg-background-light text-text-main mesh-gradient">
+        <div className="flex flex-col bg-background-light text-text-main mesh-gradient">
             <section id="inicio">
                 <HomeScreen />
             </section>

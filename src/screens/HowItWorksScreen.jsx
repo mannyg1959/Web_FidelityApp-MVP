@@ -6,9 +6,9 @@ const HowItWorksScreen = () => {
 
     return (
         <div className="antialiased bg-background-light">
-            <main className="flex-grow overflow-x-hidden">
+            <main className="flex-grow">
                 {/* Hero Section */}
-                <section className="reveal relative overflow-hidden pt-24 pb-12 px-6">
+                <section className="reveal relative overflow-hidden pt-8 pb-4 px-6">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
                     <div className="mx-auto max-w-7xl">
                         <div className="text-center space-y-8">
@@ -19,7 +19,7 @@ const HowItWorksScreen = () => {
                                 Tu programa de lealtad en <br />
                                 <span className="text-primary italic">tres simples pasos</span>
                             </h1>
-                            <p className="mx-auto max-w-2xl text-xl text-text-muted font-medium leading-relaxed">
+                            <p className="mx-auto max-w-2xl text-lg text-text-muted font-medium leading-snug">
                                 Sin hardware costoso ni integraciones complejas. Kpoint funciona directamente desde cualquier dispositivo, reinventando la conexión con tus clientes.
                             </p>
 
@@ -28,7 +28,7 @@ const HowItWorksScreen = () => {
                 </section>
 
                 {/* Steps Section */}
-                <section className="relative py-32 bg-white border-y border-orange-50">
+                <section className="relative py-8 bg-white border-y border-orange-50">
                     <div className="px-6 mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 gap-y-24 lg:grid-cols-3 lg:gap-x-16">
                             {[
@@ -64,7 +64,7 @@ const HowItWorksScreen = () => {
                                     </div>
                                     <div className="mt-10 space-y-6">
                                         <h3 className="text-3xl font-black text-text-main mb-6 tracking-tight">{item.title}</h3>
-                                        <p className="text-text-muted text-lg leading-relaxed font-medium">
+                                        <p className="text-text-muted text-base leading-snug font-medium">
                                             {item.desc}
                                         </p>
                                         
@@ -96,7 +96,7 @@ const HowItWorksScreen = () => {
                 </section>
 
                 {/* Analytics Section */}
-                <section className="reveal relative py-32 bg-slate-50 overflow-hidden">
+                <section className="reveal relative py-8 bg-slate-50 overflow-hidden">
                     <div className="px-6 mx-auto max-w-7xl">
                         <div className="flex flex-col lg:flex-row items-center gap-24">
                             <div className="w-full lg:w-1/2 space-y-12">
@@ -119,7 +119,7 @@ const HowItWorksScreen = () => {
                                             </div>
                                             <div>
                                                 <h4 className="text-2xl font-black text-text-main mb-2 tracking-tight">{feat.title}</h4>
-                                                <p className="text-text-muted text-lg font-medium leading-relaxed">{feat.desc}</p>
+                                                <p className="text-text-muted text-lg leading-snug font-medium">{feat.desc}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -127,21 +127,21 @@ const HowItWorksScreen = () => {
                             </div>
 
                             <div className="w-full lg:w-1/2">
-                                <div className="relative p-10 bg-white dark:bg-gray-900 rounded-[4rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15)] overflow-hidden border border-slate-100 dark:border-gray-800 rotate-2 hover:rotate-0 transition-all duration-700">
+                                <div className="relative p-6 md:p-10 bg-white dark:bg-gray-900 rounded-[2.5rem] md:rounded-[4rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15)] overflow-hidden border border-slate-100 dark:border-gray-800 rotate-2 hover:rotate-0 transition-all duration-700">
                                     <div className="space-y-8">
                                         <div className="h-14 w-2/3 rounded-2xl bg-slate-50 dark:bg-gray-800 animate-pulse"></div>
-                                        <div className="grid grid-cols-2 gap-8">
-                                            <div className="h-44 rounded-[2.5rem] bg-orange-50 border border-orange-100 p-8 flex flex-col justify-between group hover:bg-primary transition-colors duration-500">
-                                                <span className="text-xs font-black text-orange-900 uppercase tracking-widest group-hover:text-white">Retención</span>
-                                                <span className="text-5xl font-black text-text-main group-hover:text-white">+84%</span>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
+                                            <div className="h-40 md:h-44 rounded-[2rem] md:rounded-[2.5rem] bg-orange-50 border border-orange-100 p-6 md:p-8 flex flex-col justify-between group hover:bg-primary transition-colors duration-500">
+                                                <span className="text-[10px] md:text-xs font-black text-orange-900 uppercase tracking-widest group-hover:text-white">Retención</span>
+                                                <span className="text-3xl md:text-5xl font-black text-text-main group-hover:text-white">+84%</span>
                                                 <div className="h-1.5 w-full bg-orange-200 rounded-full group-hover:bg-white/30 overflow-hidden">
                                                     <div className="h-full bg-primary group-hover:bg-white w-[84%]"></div>
                                                 </div>
                                             </div>
-                                            <div className="h-44 rounded-[2.5rem] bg-blue-50 border border-blue-100 p-8 flex flex-col justify-between group hover:bg-blue-600 transition-colors duration-500">
-                                                <span className="text-xs font-black text-blue-900 uppercase tracking-widest group-hover:text-white">Actividad</span>
-                                                <span className="text-5xl font-black text-text-main group-hover:text-white">1.2k</span>
-                                                <span className="text-sm font-bold text-blue-400 group-hover:text-blue-100 font-medium">Canjes este mes</span>
+                                            <div className="h-40 md:h-44 rounded-[2rem] md:rounded-[2.5rem] bg-blue-50 border border-blue-100 p-6 md:p-8 flex flex-col justify-between group hover:bg-blue-600 transition-colors duration-500">
+                                                <span className="text-[10px] md:text-xs font-black text-blue-900 uppercase tracking-widest group-hover:text-white">Actividad</span>
+                                                <span className="text-3xl md:text-5xl font-black text-text-main group-hover:text-white">1.2k</span>
+                                                <span className="text-[10px] md:text-sm font-bold text-blue-400 group-hover:text-blue-100 font-medium">Canjes este mes</span>
                                             </div>
                                         </div>
                                         <div className="h-32 rounded-[2.5rem] bg-slate-50 dark:bg-gray-800 relative overflow-hidden">
@@ -155,14 +155,14 @@ const HowItWorksScreen = () => {
                 </section>
 
                 {/* Final CTA */}
-                <section className="reveal py-24 px-6 text-center">
+                <section className="reveal py-8 px-6 text-center">
                     <div className="max-w-4xl mx-auto space-y-12">
                         <h2 className="text-4xl md:text-5xl font-black text-text-main tracking-tight leading-none">Listo para ver la magia?</h2>
                         <a href="https://fidelity-app-mvp.vercel.app/" className="interactive-button group inline-flex items-center gap-4 bg-text-main text-white px-14 py-6 rounded-3xl font-black text-2xl hover:bg-black transition-all shadow-[0_30px_60px_-10px_rgba(0,0,0,0.3)] hover:-translate-y-2">
                             <span>Empezar Ahora</span>
                             <span className="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform text-3xl font-bold">rocket_launch</span>
                         </a>
-                        <p className="text-text-muted font-bold text-lg">Prueba gratuita de 14 días. Sin tarjeta de crédito.</p>
+                        <p className="text-text-muted font-bold text-lg leading-snug">Prueba gratuita de 60 días. Sin tarjeta de crédito.</p>
                     </div>
                 </section>
             </main>
