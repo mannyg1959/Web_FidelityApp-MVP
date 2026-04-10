@@ -170,22 +170,32 @@ const DashboardScreen = () => {
                     </div>
                 </section>
 
-                {/* Bottom CTA */}
-                <section className="reveal py-4 px-6">
-                    <div className="max-w-2xl mx-auto bg-blue-600 rounded-[1.5rem] p-8 md:p-10 text-center text-white overflow-hidden relative shadow-lg shadow-blue-900/20">
-                        <div className="absolute top-0 left-0 p-8 opacity-10 pointer-events-none rotate-12">
-                            <span className="material-symbols-outlined text-[120px] font-bold">hub</span>
+                {/* Bottom CTA with Zoom In Effect */}
+                <section className="reveal py-8 px-6">
+                    <div className="reveal relative p-8 md:p-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-[2.5rem] text-center overflow-hidden shadow-[0_20px_50px_-10px_rgba(37,99,235,0.4)] group hover:shadow-[0_45px_100px_-15px_rgba(37,99,235,0.6)] transition-all duration-700 hover:scale-[1.03]">
+                        {/* Animated background patterns */}
+                        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+                            <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-blue-400 rounded-full blur-[100px] animate-pulse"></div>
+                            <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-indigo-400 rounded-full blur-[100px] animate-pulse delay-1000"></div>
                         </div>
-                        <div className="relative z-10 space-y-4">
-                            <h2 className="text-2xl md:text-3xl font-black tracking-tight leading-tight italic">
-                                Tus datos nunca se vieron tan bien.
+
+                        <div className="absolute top-8 right-8 opacity-20 group-hover:opacity-40 transition-opacity duration-700 group-hover:rotate-12 group-hover:scale-110">
+                            <span className="material-symbols-outlined text-[100px] text-white font-bold">query_stats</span>
+                        </div>
+                        
+                        <div className="relative z-10 space-y-8">
+                            <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight leading-none italic">
+                                Tus datos nunca se <br />
+                                <span className="text-blue-100">vieron tan bien.</span>
                             </h2>
-                            <p className="text-blue-100 text-base max-w-sm mx-auto">
-                                Deja de adivinar. Empieza a medir y escala tu negocio basado en evidencias reales.
+                            <p className="text-blue-100 text-lg max-w-xl mx-auto leading-snug font-medium">
+                                Deja de adivinar. Empieza a medir y escala tu negocio <br className="hidden md:block" />
+                                basado en evidencias reales.
                             </p>
-                            <a href="https://fidelity-app-mvp.vercel.app/" className="interactive-button group inline-flex h-12 px-8 items-center justify-center rounded-xl bg-white text-blue-600 font-black text-lg hover:bg-blue-50 transition-all shadow-lg">
-                                <span>Ver Demo Gratis</span>
-                                <span className="material-symbols-outlined ml-2 text-primary group-hover:translate-x-1 transition-transform font-bold">rocket_launch</span>
+                            
+                            <a href="https://fidelity-app-mvp.vercel.app/" className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
+                                <span>Pruebalo Gratis</span>
+                                <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1 text-2xl">rocket_launch</span>
                             </a>
                         </div>
                     </div>

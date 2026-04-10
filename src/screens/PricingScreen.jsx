@@ -27,6 +27,10 @@ const PlanCard = () => {
         {
             title: "Seguridad y Aislamiento de Datos Corporativos",
             desc: "Tu información es tu activo más valioso. KPoint utiliza arquitectura de seguridad de nivel bancario (RLS) para garantizar que tus bases de datos de clientes, ventas y estrategias de marketing sean privadas y totalmente invisibles para otros comercios en la plataforma. Disfruta de la potencia de una plataforma SaaS con la exclusividad y reserva de un desarrollo a medida."
+        },
+        {
+            title: "Comunicación Directa y Notificaciones Push",
+            desc: "Mantén tu negocio siempre en la mente de tus clientes mediante notificaciones directas a sus dispositivos móviles. Podrás enviar alertas automáticas sobre actualizaciones de saldo, nuevos premios disponibles o promociones exclusivas. Además, el sistema incorpora un canal de mensajería privada que te permite brindar atención personalizada, resolver dudas sobre canjes o recibir feedback directo de tus consumidores, fortaleciendo el vínculo de confianza entre el comercio y el cliente."
         }
     ];
 
@@ -37,7 +41,7 @@ const PlanCard = () => {
             <div className="relative space-y-4 mb-8 text-center">
                 <h3 className="text-2xl font-black text-white tracking-tight uppercase">Un único Plan</h3>
                 <div className="pt-2">
-                    <span className="text-6xl font-black text-white">$20</span>
+                    <span className="text-6xl font-black text-white">$15</span>
                     <span className="text-slate-400 font-bold ml-2">/mes</span>
                 </div>
             </div>
@@ -101,14 +105,14 @@ const PricingScreen = () => {
                 {/* Hero section */}
                 <section className="reveal py-8 px-6 text-center max-w-5xl mx-auto space-y-8">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-text-main text-xs font-black uppercase tracking-[0.2em]">
-                        Planes Flexibles
+                        Plan Emprendedor
                     </div>
                     <h1 className="text-4xl md:text-5xl font-black tracking-tight text-text-main leading-none">
-                        Precios simples para <br />
-                        <span className="text-primary italic">negocios reales.</span>
+                        Precio simple sin <br />
+                        <span className="text-primary italic">comprometer el presupuesto</span>
                     </h1>
                     <p className="text-lg text-text-muted font-medium max-w-3xl mx-auto leading-snug">
-                        Escoge el plan que mejor se adapte al tamaño de tu operación. <br className="hidden md:block" />
+                        Diseñamos un solo plan que se adaptará al tamaño de tu operación. <br className="hidden md:block" />
                         Sin sorpresas, sin costos ocultos.
                     </p>
                     
@@ -159,19 +163,31 @@ const PricingScreen = () => {
                             ))}
                         </div>
 
-                        {/* Help Box */}
-                        <div className="reveal relative p-8 md:p-10 bg-blue-600 rounded-[1.5rem] text-center text-white overflow-hidden shadow-lg shadow-blue-900/20">
-                            <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12 pointer-events-none">
-                                <span className="material-symbols-outlined text-[100px] font-bold">chat_bubble</span>
+                        {/* Help Box with Zoom In Effect */}
+                        <div className="reveal relative p-8 md:p-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-[2.5rem] text-center overflow-hidden shadow-[0_20px_50px_-10px_rgba(37,99,235,0.4)] group hover:shadow-[0_45px_100px_-15px_rgba(37,99,235,0.6)] transition-all duration-700 hover:scale-[1.03]">
+                            {/* Animated background patterns */}
+                            <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+                                <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-blue-400 rounded-full blur-[100px] animate-pulse"></div>
+                                <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-indigo-400 rounded-full blur-[100px] animate-pulse delay-1000"></div>
                             </div>
-                            <div className="relative z-10 space-y-4">
-                                <h3 className="text-4xl md:text-5xl font-black tracking-tight leading-none">¿Tienes un caso especial?</h3>
-                                <p className="text-blue-100 text-lg max-w-md mx-auto leading-snug">
-                                    Si tu negocio tiene necesidades únicas o quieres una cotización personalizada por volumen, estamos listos para escucharte.
+
+                            <div className="absolute top-8 right-8 opacity-20 group-hover:opacity-40 transition-opacity duration-700 group-hover:rotate-12 group-hover:scale-110">
+                                <span className="material-symbols-outlined text-[100px] text-white font-bold">trending_up</span>
+                            </div>
+                            
+                            <div className="relative z-10 space-y-8">
+                                <h3 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-none">
+                                    Haz crecer su negocio <br />
+                                    <span className="text-blue-100 italic font-bold">con KPoint</span>
+                                </h3>
+                                <p className="text-blue-100 text-lg max-w-2xl mx-auto leading-snug font-medium">
+                                    Crea una experiencia gratificante para sus clientes y <br className="hidden md:block" />
+                                    establezca relaciones más sólidas.
                                 </p>
-                                <button className="interactive-button inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-3 rounded-xl font-black text-base hover:bg-blue-50 transition-all shadow-lg">
-                                    <span className="material-symbols-outlined text-xl font-bold">support_agent</span>
-                                    Hablar con un experto
+                                
+                                <button className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
+                                    <span>Comenzar</span>
+                                    <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1 text-2xl">rocket_launch</span>
                                 </button>
                             </div>
                         </div>

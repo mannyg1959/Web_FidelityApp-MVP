@@ -108,14 +108,14 @@ const BenefitsScreen = () => {
                 <section id="casos-exito" className="py-8 px-6 bg-background-subtle relative overflow-hidden">
                     <div className="absolute top-1/2 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl -z-10"></div>
                     <div className="max-w-[1280px] mx-auto relative z-10">
-                        <div className="reveal text-center mb-16 space-y-4">
+                        <div className="reveal text-center mb-10 space-y-3">
                             <h2 className="text-4xl md:text-5xl font-black text-text-main tracking-tight">Lo que dicen nuestros clientes</h2>
                             <p className="text-lg text-text-muted leading-snug font-medium">Resultados reales de negocios que ya usan Kpoint.</p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {[
                                 {
-                                    name: 'Kiosko "Santa Ana"',
+                                    name: 'Kiosko Santa Ana',
                                     quote: 'La verdad es que con Kpoint, nuestros clientes se sienten mas motivados a volver. Con solo escanear su código QR, suman y cajean sus puntos... Lo mejor es que en plena hora pico no nos quita ni 10 segundos.',
                                     metrics: [
                                         { val: '+45%', lab: 'Recurrencia' },
@@ -125,7 +125,7 @@ const BenefitsScreen = () => {
                                     icon: 'storefront'
                                 },
                                 {
-                                    name: 'GalaxyBurguers',
+                                    name: 'Galaxy Burguers',
                                     quote: 'Nuestros clientes aman sumar puntos con cada hamburguesa y perro caliente. Pasamos de ser un simple puesto de comida rápida a ser su parada obligatoria de todas las semanas.',
                                     metrics: [
                                         { val: 'x2.8', lab: 'Visitas' },
@@ -135,25 +135,25 @@ const BenefitsScreen = () => {
                                     icon: 'lunch_dining'
                                 }
                             ].map((story, i) => (
-                                <div key={i} className="reveal-scale bg-white rounded-[3rem] p-10 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-orange-50 relative overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:border-primary/20">
-                                    <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-10 transition-opacity">
-                                        <span className="material-symbols-outlined text-9xl text-primary">{story.icon}</span>
+                                <div key={i} className="reveal-scale bg-white rounded-3xl p-6 md:p-8 shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-orange-50 relative overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:border-primary/20">
+                                    <div className="absolute top-0 right-0 p-6 opacity-[0.03] group-hover:opacity-10 transition-opacity">
+                                        <span className="material-symbols-outlined text-8xl text-primary">{story.icon}</span>
                                     </div>
                                     <div className="relative z-10">
-                                        <div className="flex items-center gap-1 mb-8 text-primary">
+                                        <div className="flex items-center gap-1 mb-4 text-primary">
                                             {[...Array(5)].map((_, j) => (
-                                                <span key={j} className="material-symbols-outlined text-xl icon-filled">star</span>
+                                                <span key={j} className="material-symbols-outlined text-lg icon-filled">star</span>
                                             ))}
                                         </div>
-                                        <h3 className="text-3xl font-black mb-6 text-text-main">{story.name}</h3>
-                                        <p className="text-text-muted text-lg mb-8 leading-relaxed italic font-medium">
+                                        <h3 className="text-2xl font-black mb-3 text-text-main">{story.name}</h3>
+                                        <p className="text-text-muted text-base mb-6 leading-snug italic font-medium">
                                             "{story.quote}"
                                         </p>
-                                        <div className="grid grid-cols-3 gap-4 pt-8 border-t border-orange-50">
+                                        <div className="grid grid-cols-3 gap-2 pt-4 border-t border-orange-50">
                                             {story.metrics.map((metric, k) => (
-                                                <div key={k} className="space-y-1">
-                                                    <p className="text-2xl font-black text-primary leading-none">{metric.val}</p>
-                                                    <p className="text-[9px] uppercase font-black text-text-muted tracking-[0.1em] mt-1">{metric.lab}</p>
+                                                <div key={k} className="space-y-0.5">
+                                                    <p className="text-xl font-black text-primary leading-none">{metric.val}</p>
+                                                    <p className="text-[8px] uppercase font-black text-text-muted tracking-[0.05em]">{metric.lab}</p>
                                                 </div>
                                             ))}
                                         </div>
@@ -165,21 +165,29 @@ const BenefitsScreen = () => {
                 </section>
 
                 <section className="reveal py-4 px-6">
-                    <div className="max-w-2xl mx-auto bg-gradient-to-br from-blue-600 to-blue-700 rounded-[1.5rem] p-8 md:p-10 flex flex-col items-center text-center overflow-hidden relative shadow-xl shadow-blue-900/20">
-                        <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
-                        <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-400/10 rounded-full blur-2xl"></div>
-                        
-                        <div className="absolute top-6 right-6 opacity-10">
-                            <span className="material-symbols-outlined text-6xl text-white font-bold">confirmation_number</span>
+                    <div className="reveal relative p-8 md:p-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-[2.5rem] text-center overflow-hidden shadow-[0_20px_50px_-10px_rgba(37,99,235,0.4)] group hover:shadow-[0_45px_100px_-15px_rgba(37,99,235,0.6)] transition-all duration-700 hover:scale-[1.03]">
+                        {/* Animated background patterns */}
+                        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+                            <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-blue-400 rounded-full blur-[100px] animate-pulse"></div>
+                            <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-indigo-400 rounded-full blur-[100px] animate-pulse delay-1000"></div>
+                        </div>
+
+                        {/* Floating elements */}
+                        <div className="absolute top-8 right-8 opacity-20 group-hover:opacity-40 transition-opacity duration-700 group-hover:rotate-12 group-hover:scale-110">
+                            <span className="material-symbols-outlined text-7xl text-white font-bold">rocket_launch</span>
                         </div>
                         
-                        <h2 className="text-4xl md:text-5xl font-black text-white mb-6 relative z-10 leading-none">
-                            ¿Listo para ver tu negocio crecer?
-                        </h2>
-                        
-                        <div className="relative z-10">
-                            <button className="interactive-button h-12 px-8 bg-white text-blue-600 font-black rounded-xl text-base transition-transform hover:scale-105 shadow-lg shadow-black/10">
-                                Empieza Ahora
+                        <div className="relative z-10 space-y-8">
+                            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-none">
+                                ¿Listo para ver tu <br />
+                                <span className="text-blue-100 italic">negocio crecer?</span>
+                            </h2>
+                            
+                            <button className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
+                                <span>Empieza Ahora</span>
+                                <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+                                {/* Subtle inner glow */}
+                                <div className="absolute inset-0 rounded-2xl bg-blue-400/0 group-hover/btn:bg-blue-400/5 transition-colors"></div>
                             </button>
                         </div>
                     </div>
