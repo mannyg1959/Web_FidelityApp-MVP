@@ -6,28 +6,17 @@ const HowItWorksScreen = () => {
     useReveal();
 
     const marketingImages = [
-        'Gastronomia/Diapositiva15.PNG',
-        'Gastronomia/Diapositiva16.PNG',
-        'Gastronomia/Diapositiva17.PNG',
-        'Gastronomia/Diapositiva8.PNG',
-        'General/Diapositiva1.PNG',
-        'General/Diapositiva2.PNG',
-        'General/Diapositiva6.PNG',
-        'Salud-Belleza/Diapositiva10.PNG',
-        'Salud-Belleza/Diapositiva11.PNG',
-        'Salud-Belleza/Diapositiva12.PNG',
-        'Salud-Belleza/Diapositiva13.PNG',
-        'Salud-Belleza/Diapositiva14.PNG',
-        'Servicios-Varios/Diapositiva12.PNG',
-        'Servicios-Varios/Diapositiva18.PNG',
-        'Servicios-Varios/Diapositiva19.PNG',
-        'Servicios-Varios/Diapositiva3.PNG',
-        'Servicios-Varios/Diapositiva4.PNG',
-        'Tiendas/Diapositiva20.PNG',
-        'Tiendas/Diapositiva21.PNG',
-        'Tiendas/Diapositiva5.PNG',
-        'Tiendas/Diapositiva7.PNG',
-        'Tiendas/Diapositiva9.PNG'
+        'Diapositiva1.PNG',
+        'Diapositiva10.PNG',
+        'Diapositiva11.PNG',
+        'Diapositiva2.PNG',
+        'Diapositiva3.PNG',
+        'Diapositiva4.PNG',
+        'Diapositiva5.PNG',
+        'Diapositiva6.PNG',
+        'Diapositiva7.PNG',
+        'Diapositiva8.PNG',
+        'Diapositiva9.PNG'
     ];
 
     return (
@@ -82,7 +71,7 @@ const HowItWorksScreen = () => {
                                     users: true
                                 }
                             ].map((item, i) => (
-                                <div key={i} className={`reveal-scale group relative p-10 rounded-[3rem] transition-all duration-700 bg-slate-50 shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:bg-white hover:shadow-[0_45px_90px_-20px_rgba(0,0,0,0.2)] border border-transparent hover:border-orange-100`}>
+                                <div key={i} className={`reveal-scale group relative p-10 rounded-[3rem] transition-all duration-700 bg-slate-50 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.25)] hover:bg-white hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.35)] border border-transparent hover:border-orange-100`}>
                                     <div className="absolute -top-12 left-10">
                                         <div className={`flex items-center justify-center size-24 rounded-3xl bg-primary text-white text-5xl font-black shadow-2xl shadow-primary/30 transform ${item.rotation} group-hover:rotate-0 group-hover:scale-110 transition-all duration-500`}>
                                             {item.step}
@@ -153,18 +142,41 @@ const HowItWorksScreen = () => {
                             </div>
 
                             <div className="w-full lg:w-1/2">
-                                <div className="relative p-6 md:p-10 bg-white dark:bg-gray-900 rounded-[2.5rem] md:rounded-[4rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.15)] overflow-hidden border border-slate-100 dark:border-gray-800 rotate-2 hover:rotate-0 transition-all duration-700">
+                                <div className="relative p-6 md:p-10 bg-white dark:bg-gray-900 rounded-[2.5rem] md:rounded-[4rem] shadow-[0_60px_120px_-20px_rgba(0,0,0,0.3)] hover:shadow-[0_80px_140px_-20px_rgba(0,0,0,0.4)] overflow-hidden border border-slate-100 dark:border-gray-800 rotate-2 hover:rotate-0 transition-all duration-700">
                                     <div className="space-y-8">
                                         <div className="h-14 w-2/3 rounded-2xl bg-slate-50 dark:bg-gray-800 animate-pulse"></div>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
-                                            <div className="h-40 md:h-44 rounded-[2rem] md:rounded-[2.5rem] bg-orange-50 border border-orange-100 p-6 md:p-8 flex flex-col justify-between group hover:bg-primary transition-colors duration-500">
-                                                <span className="text-[10px] md:text-xs font-black text-orange-900 uppercase tracking-widest group-hover:text-white">Retención</span>
-                                                <span className="text-3xl md:text-5xl font-black text-text-main group-hover:text-white">+84%</span>
-                                                <div className="h-1.5 w-full bg-orange-200 rounded-full group-hover:bg-white/30 overflow-hidden">
-                                                    <div className="h-full bg-primary group-hover:bg-white w-[84%]"></div>
+                                            <div className="h-40 md:h-44 rounded-[2rem] md:rounded-[2.5rem] bg-orange-50 border border-orange-100 shadow-[0_20px_40px_-15px_rgba(234,88,12,0.35)] hover:shadow-[0_30px_60px_-15px_rgba(234,88,12,0.5)] p-6 md:p-6 flex items-center justify-center relative group hover:bg-primary transition-all duration-500 overflow-hidden">
+                                                <span className="absolute top-6 left-6 text-[10px] md:text-xs font-black text-orange-900 uppercase tracking-widest group-hover:text-white">Crecimiento</span>
+                                                <div className="relative w-28 h-28 md:w-32 md:h-32 mt-4 flex items-center justify-center">
+                                                    <svg className="absolute inset-0 w-full h-full transform -rotate-90 origin-center drop-shadow-md" viewBox="0 0 36 36">
+                                                        <path
+                                                            className="text-orange-200 group-hover:text-white/20 transition-colors duration-500"
+                                                            d="M18 2.0845
+                                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            strokeWidth="3.5"
+                                                        />
+                                                        <path
+                                                            className="text-primary group-hover:text-white transition-colors duration-500 drop-shadow-sm"
+                                                            d="M18 2.0845
+                                                               a 15.9155 15.9155 0 0 1 0 31.831
+                                                               a 15.9155 15.9155 0 0 1 0 -31.831"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            strokeWidth="3.5"
+                                                            strokeDasharray="84, 100"
+                                                            strokeLinecap="round"
+                                                        />
+                                                    </svg>
+                                                    <span className="text-2xl md:text-3xl font-black text-text-main group-hover:text-white z-10 tracking-tighter">
+                                                        +84%
+                                                    </span>
                                                 </div>
                                             </div>
-                                            <div className="h-40 md:h-44 rounded-[2rem] md:rounded-[2.5rem] bg-blue-50 border border-blue-100 p-6 md:p-8 flex flex-col justify-between group hover:bg-blue-600 transition-colors duration-500">
+                                            <div className="h-40 md:h-44 rounded-[2rem] md:rounded-[2.5rem] bg-blue-50 border border-blue-100 shadow-[0_20px_40px_-15px_rgba(37,99,235,0.35)] hover:shadow-[0_30px_60px_-15px_rgba(37,99,235,0.5)] p-6 md:p-8 flex flex-col justify-between group hover:bg-blue-600 transition-all duration-500">
                                                 <span className="text-[10px] md:text-xs font-black text-blue-900 uppercase tracking-widest group-hover:text-white">Actividad</span>
                                                 <span className="text-3xl md:text-5xl font-black text-text-main group-hover:text-white">1.2k</span>
                                                 <span className="text-[10px] md:text-sm font-bold text-blue-400 group-hover:text-blue-100 font-medium">Canjes este mes</span>
@@ -195,7 +207,7 @@ const HowItWorksScreen = () => {
                 {/* Supabase Assets Carousel */}
                 <section className="reveal">
                     <InfiniteCarousel 
-                        bucketName="marketing_assets" 
+                        bucketName="web_marketing_assets" 
                         projectRef="gtxzmkmwjclwppnkiifi" 
                         images={marketingImages} 
                     />

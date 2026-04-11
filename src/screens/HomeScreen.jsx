@@ -50,9 +50,9 @@ const HomeScreen = () => {
 
                     {/* Right Column: Static Hero Image */}
                     <div className="relative flex flex-1 items-center justify-center lg:justify-end">
-                        <img 
-                            src="/hero-image.png" 
-                            alt="KPoint Platform" 
+                        <img
+                            src="/hero-image.png"
+                            alt="KPoint Platform"
                             className="w-full max-w-[600px] h-auto object-contain"
                         />
                     </div>
@@ -108,7 +108,7 @@ const HomeScreen = () => {
                 <div className="mx-auto max-w-2xl rounded-[2rem] bg-gradient-to-br from-blue-600 to-blue-700 p-6 md:p-8 text-center relative overflow-hidden shadow-[0_30px_70px_-10px_rgba(0,40,200,0.4)]">
                     <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
                     <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-400/10 rounded-full blur-2xl"></div>
-                    
+
                     <div className="relative z-10 flex flex-col items-center gap-4">
                         <h2 className="text-4xl font-black text-white sm:text-5xl max-w-md leading-none">¿Listo para transformar tu negocio?</h2>
                         <p className="text-blue-100 text-lg leading-snug max-w-sm">Únete a cientos de comercios que ya están digitalizando su lealtad.</p>

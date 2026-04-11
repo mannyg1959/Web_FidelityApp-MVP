@@ -37,12 +37,11 @@ const InfiniteCarousel = ({ bucketName, projectRef, images }) => {
                     >
                         {images.map((img, index) => (
                             <div key={index} className="w-full flex-shrink-0 flex items-center justify-center px-0">
-                                <div className="w-full h-[300px] md:h-[500px] lg:h-[600px] overflow-hidden shadow-2xl border border-orange-50 bg-slate-50 relative group/img">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10"></div>
+                                <div className="w-full h-[300px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-[2rem] border border-orange-50 bg-slate-50 relative group/img">
                                     <img 
                                         src={`${baseUrl}${img.replace(/ /g, '%20')}`} 
                                         alt={`Slide ${index + 1}`}
-                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-105"
+                                        className="w-full h-full object-contain transition-transform duration-1000 group-hover/img:scale-105"
                                         onError={(e) => {
                                             e.target.src = 'https://via.placeholder.com/800x400?text=Image+Not+Found';
                                         }}
