@@ -88,16 +88,16 @@ const BenefitsScreen = () => {
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                             {[
-                                { icon: 'restaurant', label: 'Restaurantes', color: 'text-orange-500', bg: 'bg-orange-50' },
+                                { icon: 'restaurant', label: 'Restaurantes', color: 'text-orange-600', bg: 'bg-orange-50' },
                                 { icon: 'shopping_bag', label: 'Servicios', color: 'text-primary', bg: 'bg-orange-50' },
-                                { icon: 'content_cut', label: 'Estética', color: 'text-blue-500', bg: 'bg-blue-50' },
-                                { icon: 'storefront', label: 'Kioscos', color: 'text-purple-500', bg: 'bg-purple-50' }
+                                { icon: 'content_cut', label: 'Estética', color: 'text-blue-600', bg: 'bg-blue-50' },
+                                { icon: 'storefront', label: 'Kioscos', color: 'text-purple-600', bg: 'bg-purple-50' }
                             ].map((item, i) => (
-                                <div key={i} className="reveal-scale group p-4 py-6 rounded-3xl bg-background-light border border-slate-100 transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.1)] hover:shadow-xl hover:shadow-orange-100 hover:-translate-y-1 h-fit">
-                                    <div className={`size-12 rounded-2xl ${item.bg} ${item.color} flex items-center justify-center mb-3 mx-auto transition-all group-hover:scale-110 group-hover:rotate-6`}>
-                                        <span className="material-symbols-outlined text-2xl">{item.icon}</span>
+                                <div key={i} className="reveal-scale group p-4 py-8 rounded-3xl bg-white border border-orange-50 transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.08)] hover:shadow-xl hover:bg-orange-50/30 hover:scale-[1.05] hover:-translate-y-2 cursor-pointer h-fit">
+                                    <div className={`size-14 rounded-2xl ${item.bg} ${item.color} flex items-center justify-center mb-3 mx-auto transition-all group-hover:scale-110 group-hover:rotate-6 shadow-sm`}>
+                                        <span className="material-symbols-outlined text-2xl font-bold">{item.icon}</span>
                                     </div>
-                                    <h4 className="font-bold text-lg text-text-main">{item.label}</h4>
+                                    <h4 className="font-bold text-lg text-text-main group-hover:text-primary transition-colors">{item.label}</h4>
                                 </div>
                             ))}
                         </div>

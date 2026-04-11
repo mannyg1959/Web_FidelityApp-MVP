@@ -67,37 +67,34 @@ const HomeScreen = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="reveal-scale group flex flex-col gap-4 rounded-[2rem] bg-white p-6 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-orange-50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-100/50 hover:-translate-y-4 h-fit">
+                        <div className="reveal-scale group flex flex-col gap-4 rounded-[2rem] bg-white p-6 shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-orange-50 transition-all duration-300 hover:bg-orange-50/30 hover:scale-[1.03] hover:-translate-y-2 h-fit cursor-pointer">
                             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-50 text-primary transition-all group-hover:scale-110 group-hover:bg-primary group-hover:text-white group-hover:rotate-6">
                                 <span className="material-symbols-outlined text-[24px]">sentiment_satisfied</span>
                             </div>
                             <div>
-                                <h3 className="mb-1 text-xl font-bold text-text-main">Fácil de usar</h3>
-                                <p className="text-base text-text-muted leading-snug font-medium">Interfaz intuitiva diseñada para que tus clientes amen volver sin frustraciones tecnológicas.</p>
+                                <h3 className="mb-1 text-lg font-bold text-text-main">Fácil de usar</h3>
+                                <p className="text-sm text-text-muted leading-snug font-medium">Interfaz intuitiva diseñada para que tus clientes amen volver sin frustraciones tecnológicas.</p>
                             </div>
-
                         </div>
 
-                        <div className="reveal-scale group flex flex-col gap-4 rounded-[2rem] bg-white p-6 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-orange-50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-100/50 hover:-translate-y-4 md:translate-y-2 h-fit">
+                        <div className="reveal-scale group flex flex-col gap-4 rounded-[2rem] bg-white p-6 shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-orange-50 transition-all duration-300 hover:bg-orange-50/30 hover:scale-[1.03] hover:-translate-y-2 h-fit cursor-pointer md:mt-4">
                             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-50 text-primary transition-all group-hover:scale-110 group-hover:bg-primary group-hover:text-white group-hover:-rotate-6">
                                 <span className="material-symbols-outlined text-[24px]">palette</span>
                             </div>
                             <div>
-                                <h3 className="mb-1 text-xl font-bold text-text-main">Personalizable</h3>
-                                <p className="text-base text-text-muted leading-snug font-medium">Adapta colores, recompensas y <span className="text-primary font-bold underline decoration-primary/30">tu logo</span> para una identidad única.</p>
+                                <h3 className="mb-1 text-lg font-bold text-text-main">Personalizable</h3>
+                                <p className="text-sm text-text-muted leading-snug font-medium">Adapta colores, recompensas y <span className="text-primary font-bold underline decoration-primary/30">tu logo</span> para una identidad única.</p>
                             </div>
-
                         </div>
 
-                        <div className="reveal-scale group flex flex-col gap-4 rounded-[2rem] bg-white p-6 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-orange-50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-100/50 hover:-translate-y-4 h-fit">
+                        <div className="reveal-scale group flex flex-col gap-4 rounded-[2rem] bg-white p-6 shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-orange-50 transition-all duration-300 hover:bg-orange-50/30 hover:scale-[1.03] hover:-translate-y-2 h-fit cursor-pointer">
                             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-50 text-primary transition-all group-hover:scale-110 group-hover:bg-primary group-hover:text-white group-hover:rotate-6">
                                 <span className="material-symbols-outlined text-[24px]">monitoring</span>
                             </div>
                             <div>
-                                <h3 className="mb-1 text-xl font-bold text-text-main">Data Real</h3>
-                                <p className="text-base text-text-muted leading-snug font-medium">Conoce a tus mejores clientes y optimiza tus campañas con análisis detallados en vivo.</p>
+                                <h3 className="mb-1 text-lg font-bold text-text-main">Data Real</h3>
+                                <p className="text-sm text-text-muted leading-snug font-medium">Conoce a tus mejores clientes y optimiza tus campañas con análisis detallados en vivo.</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -109,8 +106,11 @@ const HomeScreen = () => {
                     <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
                     <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-400/10 rounded-full blur-2xl"></div>
 
-                    <div className="relative z-10 flex flex-col items-center gap-4">
-                        <h2 className="text-4xl font-black text-white sm:text-5xl max-w-md leading-none">¿Listo para transformar tu negocio?</h2>
+                    <div className="relative z-10 flex flex-col items-center gap-6">
+                        <div className="bg-white p-4 rounded-3xl shadow-xl transform hover:scale-110 transition-transform duration-500">
+                            <img src="/logo_kpoint.png" alt="KPoint" className="h-[120px] md:h-[150px] w-auto object-contain" />
+                        </div>
+                        <h2 className="text-3xl font-black text-white sm:text-4xl max-w-sm leading-tight mt-2">¿Listo para transformar tu negocio?</h2>
                         <p className="text-blue-100 text-lg leading-snug max-w-sm">Únete a cientos de comercios que ya están digitalizando su lealtad.</p>
                         <div className="flex flex-col sm:flex-row gap-3 mt-1">
                             <a href="https://app.kpointve.com" className="interactive-button flex items-center justify-center h-12 px-8 bg-white text-blue-600 font-black rounded-xl text-base transition-transform hover:scale-105 shadow-lg shadow-black/10">

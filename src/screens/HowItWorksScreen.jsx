@@ -82,11 +82,11 @@ const HowItWorksScreen = () => {
                                         <p className="text-text-muted text-base leading-snug font-medium">
                                             {item.desc}
                                         </p>
-                                        
+
                                         {item.users ? (
                                             <div className="flex items-center gap-4">
                                                 <div className="flex -space-x-4">
-                                                    {[1,2,3].map(n => (
+                                                    {[1, 2, 3].map(n => (
                                                         <div key={n} className="w-12 h-12 rounded-2xl border-4 border-white bg-orange-200 overflow-hidden shadow-sm"></div>
                                                     ))}
                                                     <div className="w-12 h-12 rounded-2xl border-4 border-white bg-text-main flex items-center justify-center text-xs font-black text-white">+50</div>
@@ -176,7 +176,7 @@ const HowItWorksScreen = () => {
                                                     </span>
                                                 </div>
                                             </div>
-                                            <div className="h-40 md:h-44 rounded-[2rem] md:rounded-[2.5rem] bg-blue-50 border border-blue-100 shadow-[0_20px_40px_-15px_rgba(37,99,235,0.35)] hover:shadow-[0_30px_60px_-15px_rgba(37,99,235,0.5)] p-6 md:p-8 flex flex-col justify-between group hover:bg-blue-600 transition-all duration-500">
+                                            <div className="h-40 md:h-44 rounded-[2rem] md:rounded-[2.5rem] bg-blue-50 border border-blue-100 shadow-[0_20px_40px_-15px_rgba(37,99,235,0.35)] hover:shadow-[0_30px_60px_-15px_rgba(37,99,235,0.5)] p-6 md:p-8 flex flex-col justify-between group hover:bg-blue-600 transition-all duration-500 relative overflow-hidden">
                                                 <span className="text-[10px] md:text-xs font-black text-blue-900 uppercase tracking-widest group-hover:text-white">Actividad</span>
                                                 <span className="text-3xl md:text-5xl font-black text-text-main group-hover:text-white">1.2k</span>
                                                 <span className="text-[10px] md:text-sm font-bold text-blue-400 group-hover:text-blue-100 font-medium">Canjes este mes</span>
@@ -200,16 +200,16 @@ const HowItWorksScreen = () => {
                             <span>Empezar Ahora</span>
                             <span className="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform text-3xl font-bold">rocket_launch</span>
                         </a>
-                        <p className="text-text-muted font-bold text-lg leading-snug">Prueba gratuita de 60 días. Sin tarjeta de crédito.</p>
+                        <p className="text-text-muted font-bold text-lg leading-snug">Prueba gratuita de 60 días. Sin contratos ni pagos iniciales.</p>
                     </div>
                 </section>
 
                 {/* Supabase Assets Carousel */}
                 <section className="reveal">
-                    <InfiniteCarousel 
-                        bucketName="web_marketing_assets" 
-                        projectRef="gtxzmkmwjclwppnkiifi" 
-                        images={marketingImages} 
+                    <InfiniteCarousel
+                        bucketName="web_marketing_assets"
+                        projectRef="gtxzmkmwjclwppnkiifi"
+                        images={marketingImages}
                     />
                 </section>
             </main>
