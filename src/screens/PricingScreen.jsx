@@ -70,7 +70,7 @@ const PlanCard = () => {
             </div>
 
             <a href="https://app.kpointve.com" className="interactive-button relative w-full py-4 flex items-center justify-center rounded-2xl bg-primary text-white font-black text-xl hover:brightness-110 transition-all shadow-xl shadow-primary/20">
-                Empezar 60 días gratis
+                Empezar 45 días gratis
             </a>
         </div>
     );
@@ -121,7 +121,7 @@ const PricingScreen = () => {
                         <div className="relative bg-white border-2 border-primary rounded-2xl px-10 py-5 shadow-2xl">
                             <p className="text-text-main font-black text-xl flex items-center gap-3">
                                 <span className="material-symbols-outlined text-primary scale-125 font-bold">celebration</span>
-                                🚀 ¡DISPONES DE 60 DÍAS GRATIS AL SUSCRIBIRTE!
+                                🚀 ¡DISPONES DE 45 DÍAS GRATIS AL SUSCRIBIRTE!
                             </p>
                         </div>
                     </div>

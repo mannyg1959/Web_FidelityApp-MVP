@@ -200,7 +200,7 @@ const HowItWorksScreen = () => {
                             <span>Empezar Ahora</span>
                             <span className="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform text-3xl font-bold">rocket_launch</span>
                         </a>
-                        <p className="text-text-muted font-bold text-lg leading-snug">Prueba gratuita de 60 días. Sin contratos ni pagos iniciales.</p>
+                        <p className="text-text-muted font-bold text-lg leading-snug">Prueba gratuita de 45 días. Sin contratos ni pagos iniciales.</p>
                     </div>
                 </section>
 
