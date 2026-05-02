@@ -112,10 +112,11 @@ const HomeScreen = () => {
                         </div>
                         <h2 className="text-3xl font-black text-white sm:text-4xl max-w-sm leading-tight mt-2">¿Listo para transformar tu negocio?</h2>
                         <p className="text-blue-100 text-lg leading-snug max-w-sm">Únete a cientos de comercios que ya están digitalizando su lealtad.</p>
-                        <div className="flex flex-col sm:flex-row gap-3 mt-1">
+                        <div className="flex flex-col items-center gap-3 mt-1">
                             <a href="https://app.kpointve.com" className="interactive-button flex items-center justify-center h-12 px-8 bg-white text-blue-600 font-black rounded-xl text-base transition-transform hover:scale-105 shadow-lg shadow-black/10">
                                 Comenzar Gratis
                             </a>
+                            <p className="text-blue-100/90 text-sm font-bold tracking-wide">Prueba Gratis por 45 días</p>
                         </div>
                     </div>
                 </div>

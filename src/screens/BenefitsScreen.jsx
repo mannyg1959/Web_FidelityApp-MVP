@@ -183,12 +183,15 @@ const BenefitsScreen = () => {
                                 <span className="text-blue-100 italic">negocio crecer?</span>
                             </h2>
                             
-                            <a href="https://app.kpointve.com" className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
-                                <span>Empieza Ahora</span>
-                                <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
-                                {/* Subtle inner glow */}
-                                <div className="absolute inset-0 rounded-2xl bg-blue-400/0 group-hover/btn:bg-blue-400/5 transition-colors"></div>
-                            </a>
+                            <div className="flex flex-col items-center gap-3">
+                                <a href="https://app.kpointve.com" className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
+                                    <span>Empieza Ahora</span>
+                                    <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+                                    {/* Subtle inner glow */}
+                                    <div className="absolute inset-0 rounded-2xl bg-blue-400/0 group-hover/btn:bg-blue-400/5 transition-colors"></div>
+                                </a>
+                                <p className="text-blue-100/90 text-sm font-bold tracking-wide">Prueba Gratis por 45 días</p>
+                            </div>
                         </div>
                     </div>
                 </section>

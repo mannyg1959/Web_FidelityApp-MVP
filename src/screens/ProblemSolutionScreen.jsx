@@ -101,10 +101,11 @@ const ProblemSolutionScreen = () => {
                             <p className="text-blue-100 text-lg leading-snug max-w-md mb-6 font-medium">
                                 Los clientes que amarán tu negocio están ahí fuera. Dales una razón poderosa para volver con Kpoint.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
+                            <div className="flex flex-col items-center gap-3 w-full justify-center">
                                 <a href="https://app.kpointve.com" className="interactive-button flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-white text-blue-600 text-base font-black transition-all shadow-lg shadow-black/10">
                                     Pruébalo Gratis
                                 </a>
+                                <p className="text-blue-100/90 text-sm font-bold tracking-wide">Prueba Gratis por 45 días</p>
                             </div>
                         </div>
                     </div>

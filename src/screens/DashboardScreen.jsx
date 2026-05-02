@@ -193,10 +193,13 @@ const DashboardScreen = () => {
                                 basado en evidencias reales.
                             </p>
                             
-                            <a href="https://app.kpointve.com" className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
-                                <span>Pruebalo Gratis</span>
-                                <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1 text-2xl">rocket_launch</span>
-                            </a>
+                            <div className="flex flex-col items-center gap-3">
+                                <a href="https://app.kpointve.com" className="interactive-button group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-2xl hover:shadow-white/20">
+                                    <span>Pruebalo Gratis</span>
+                                    <span className="material-symbols-outlined font-bold transition-transform group-hover/btn:translate-x-1 text-2xl">rocket_launch</span>
+                                </a>
+                                <p className="text-blue-100/90 text-sm font-bold tracking-wide">Prueba Gratis por 45 días</p>
+                            </div>
                         </div>
                     </div>
                 </section>
