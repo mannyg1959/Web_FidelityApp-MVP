@@ -53,6 +53,7 @@ export const Navbar = () => {
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     className="flex h-10 w-10 items-center justify-center rounded-lg bg-background-subtle text-text-main md:hidden"
+                    aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
                 >
                     <span className="material-symbols-outlined">
                         {isMenuOpen ? 'close' : 'menu'}
@@ -90,10 +91,10 @@ export const Footer = () => (
             </div>
             <p className="text-sm text-text-main font-bold dark:text-gray-200">© 2026 Kpoint Inc. Todos los derechos reservados.</p>
             <div className="flex gap-6">
-                <a className="text-text-main hover:text-primary transition-colors" href="#">
+                <a className="text-text-main hover:text-primary transition-colors" href="#" aria-label="Enviar correo electrónico">
                     <span className="material-symbols-outlined font-black">mail</span>
                 </a>
-                <a className="text-text-main hover:text-primary transition-colors" href="#">
+                <a className="text-text-main hover:text-primary transition-colors" href="#" aria-label="Visitar sitio web">
                     <span className="material-symbols-outlined font-black">public</span>
                 </a>
             </div>
