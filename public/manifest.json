@@ -1,0 +1,23 @@
+{
+  "name": "KPoint - Fidelización Digital",
+  "short_name": "KPoint",
+  "description": "KPoint es la plataforma líder en fidelización digital. Premia a tus clientes, aumenta tus ventas y moderniza tu negocio con nuestro sistema de puntos inteligente.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FF7043",
+  "icons": [
+    {
+      "src": "/logo_kpoint.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo_kpoint.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
